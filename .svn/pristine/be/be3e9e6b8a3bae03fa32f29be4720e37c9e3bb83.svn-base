@@ -1,0 +1,32 @@
+{template 'content', 'header'}
+<link href="{LED_PATH}css/news.css?v=11" rel="stylesheet" />
+<link href="{LED_PATH}css/partner.css?v=11" rel="stylesheet" />
+<!-- main start  -->
+
+   <div class="container comm about">
+      <div class="lt">
+               {template "content","left_box"}
+            </div>
+
+      <div class="right_content">
+         {template "content","position_local"}
+
+
+         <div class="w_prd_rc_box w_prd_league_city w_prd_league_city2">
+           <ul>
+			{pc:get sql="SELECT * FROM phpcms_partner WHERE catid=$catid ORDER BY listorder DESC" num="12" return="data"  page="$page"}
+				{loop $data $r}
+             <li class="f1t"><a href="{$r[url]}" target="_blank"><div class="logo"><img src="{$r[thumb]}"></div><p class="title">{$r[title]}</p><p>{str_cut($r['description'], 100)}</p></a></li>
+				{/loop}
+			{/pc}
+           </ul>
+         </div>
+			<div id="pages">
+                    {$pages}
+                </div>
+      </div>
+
+
+   </div>
+<div style="clear: both;"></div>
+{template 'content', 'footer'}

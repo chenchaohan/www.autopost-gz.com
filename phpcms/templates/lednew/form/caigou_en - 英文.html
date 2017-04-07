@@ -1,0 +1,341 @@
+{template "content","header"}
+<script src="{JS_PATH}jquery.validate.js"></script>
+<style>
+.chanzhan{ width:790px;}
+.chanzhan .cz_title{width:200px;}
+.zhanqu{ width:600px;}
+
+
+.contentleft h3{ font-size:16px;  font-weight:normal; color:#666; line-height:24px; height:24px; width:690px; clear:both; float:left; border-bottom:1px dashed #ccc;}
+.contentleft ul{ font-size:16px;clear:both; flcoat:left; width:690px; padding:10px 0;}
+.contentleft ul li{ width:690px; float:left; margin:10px 0;}
+.contentleft ul li b{ font-size:16px;width:140px; text-align:right; display:block; float:left; line-height:24px;font-weight:normal; padding-right:10px; }
+
+.contentleft ul li h5{ width:55px; text-align:right; display:block; float:left; line-height:24px; padding-right:10px; }
+.contentleft ul li b i{font-size:26px; color:red; margin-right:3px;vertical-align: middle;}
+.contentleft ul li span{ width:440px; float:left; display:block; overflow:hidden;}
+.contentleft ul li span input{border:1px solid #ccc;font-size:12px; height:19px;line-height:19px; padding:4px; }
+.contentleft ul li span input.input{width:125px;}
+
+label{font-size:16px;vertical-align: bottom;}
+.contentleft ul li span.radios input{ vertical-align:middle; margin:5px 3px 0 0px; background:none; }
+.contentleft ul li span.radios label{font-size:16px;margin-top:5px; margin-right:5px;}
+.contentleft ul li span input.firstname{ width:100px; margin-right:10px;}
+.contentleft ul li span input.lastname{ width:70px;}
+.contentleft ul li span input.gh{ width:50px; margin-right:10px;}
+.contentleft ul li span input.qh{ width:70px; margin:0 10px;}
+.contentleft ul li span input.dh{ width:100px;margin-left:10px;}
+.contentleft ul li span p{ clear:both;color: #888;font-size: 12px; line-height:24px; text-indent:0;}
+.contentleft ul li span input.email{ width:250px;}
+.contentleft ul li .un_input{ margin:0; padding:0;border:0; background-color:transparent; border-bottom:1px solid #000;}
+.contentleft ul li span input.inputA{width:263px;}
+.contentleft ul li span input.inputE{width:60px;}
+.contentleft ul li span.tele input{ float:left;}
+.contentleft ul li span.tele .span2{ float:left; width:5px; overflow:hidden; display:block;margin:5px 0; }
+.contentleft ul li span input.inputB{width:61px;}
+.contentleft table tr{height:40px;}
+
+</style>
+
+<div class="content">
+	<form  class="chanzhan" id="myform" action="index.php?m=form&c=index&a=post_en" method="post">
+<div class="contentleft">
+    	<h3><strong>Personal Information</strong><span style="float:right;">Fields marked with an asterisk<i style="color:red; font-weight:bold;">*</i>are required.</span> </h3>
+            <ul id="bussiness">
+                <li><b><i>*</i>Name:</b>
+                	<span class="tele">
+                        <input type="text" class="input" maxlength="128" value="" name="name" id="name">
+                    </span>
+				</li>
+              
+                <li><b><i style="display:none;">*</i>Sex:</b>
+                	<span class="radios">
+                        <input type="radio" value="Male"  name="sex" id="radioSexMr"><label for="rblUserType_0">Male</label>
+                        <input type="radio" value="Female"  name="sex" id="radioSexMrs"><label for="rblUserType_1">Female</label>
+                    </span>
+                </li>
+                <li><b><i style="display:none;">*</i>Position:</b>
+                    <span class="tele">
+               		 <input type="text" class="input" maxlength="32" name="position" id="position">
+                    </span>
+                </li>
+                <li><b><i>*</i>Email:</b>
+                	<span>
+                    	<input type="text" class=" inputA" maxlength="128" name="email" id="email">
+                    </span>
+                </li>
+                <li><b><i>*</i>Mobile:</b>
+                	<span class="tele">
+                   		 <input type="text" class="inputE" maxlength="8" name="phone_country" id="phone_country"><span style="width:5px;" class="span2">-</span>
+                   		 <input type="text" class="inputE" maxlength="8" name="phone_area" id="phone_area"><span style="width:5px;" class="span2">-</span>
+                   		 <input type="text" class="input" maxlength="34" name="phone_number" id="phone_number">
+                         <p>e.g. 00-86-12345678</p>
+                    </span>
+              </li>
+
+            </ul>
+
+            <h3><strong>Company Information</strong></h3>
+            <ul>
+            <li><b><i>*</i>Company Name:</b>
+                	<span>
+                    	<input type="text" class="inputA" maxlength="256" name="company_name" id="company_name">
+                    </span>
+                </li>
+                
+            <li><b><i style="display:none;">*</i>Country:</b>
+                	<span>
+                    	<input type="text" class="inputA" maxlength="256" name="country" id="country">
+                    </span>
+            </li>
+            <li><b><i style="display:none;">*</i>Tel No:</b>
+                	<span class="tele">
+                   		 <input type="text" class="inputE" maxlength="8" name="tel_country" id="tel_country"><span style="width:5px;" class="span2">-</span>
+                   		 <input type="text" class="inputE" maxlength="8" name="tel_area" id="tel_area"><span style="width:5px;" class="span2">-</span>
+                   		 <input type="text" class="input" maxlength="34" name="tel_number" id="tel_number">
+                         <p>e.g. 86 - 571 - 12345678</p>
+                    </span>
+              </li>
+              <li><b><i></i>Fax No:</b>
+                	<span class="tele">
+                   		 <input type="text" class="inputE" maxlength="8" name="fax_country" id="fax_country"><span style="width:5px;" class="span2">-</span>
+                   		 <input type="text" class="inputE" maxlength="8" name="fax_area" id="fax_area"><span style="width:5px;" class="span2">-</span>
+                   		 <input type="text" class="input" maxlength="34" name="fax_number" id="fax_number">
+                         <p>e.g. 86 - 571 - 12345678</p>
+                    </span>
+              </li>
+                <li><b><i>*</i>Address: </b>
+                	<span>
+                    	<input type="text" class="inputA" maxlength="512" name="address" id="address">
+                    </span>
+                </li>
+                <li><b><i></i>Postcode:</b>
+                    <span class="tele">
+               		 <input type="text" class="input" maxlength="32"  name="zip" id="zip">
+                    </span>
+                </li>
+                
+
+                <li><b><i></i>Website:</b>
+                	<span>
+                    	<input type="text" class="inputA" maxlength="256" name="website" id="website">
+                    </span>
+                </li>
+
+
+            </ul>
+ 
+            <h3><strong>How do you find out the information about ISLE</strong><i style="color:Red;font-size:26px;vertical-align: bottom;">*</i></h3>
+            <ul>
+				<li>
+				<h5>&nbsp;</h5>
+				<span>
+				<table border="0" style="width:600px;" id="about_isle">
+					<tbody>
+					<tr>
+						<td width="250"><input type="radio"  value="Email direct marketing" name="about_isle" id="RadioButtonList1_0"><label for="RadioButtonList1_0">Email direct marketing</label>
+						</td width="250">
+						<td>
+						<input type="radio"  value="Postal invitation letter from organizer" name="about_isle" id="RadioButtonList1_5"><label for="RadioButtonList1_5">Postal invitation letter from organizer</label></td>
+					</tr>
+					<tr>
+						<td><input type="radio"  value="Email invitation from organizer" name="about_isle" id="RadioButtonList1_1"><label for="RadioButtonList1_1">Email invitation from organizer</label></td>
+
+						<td><input type="radio"  value="Publishing media" name="about_isle" id="RadioButtonList1_6"><label for="RadioButtonList1_6">Publishing media</label></td>
+					</tr>
+					<tr>
+						<td><input type="radio"  value="Website searching" name="about_isle" id="RadioButtonList1_4"><label for="RadioButtonList1_4">Website searching</label></td><td></td>
+					</tr>
+					</tbody>
+				</table>
+						Others<input type="text" class="un_input" id="about_isle_other" name="about_isle_other">
+					</span>
+				</li>
+            </ul>
+ 
+            <h3><strong>Your purchasing intention of Sign Products</strong><i style="color:Red;font-size:26px;vertical-align: bottom;">*</i></h3>
+            <ul>
+                <li><h5>&nbsp;</h5><span>
+                    <table border="0" style="width:100%;" id="CheckBoxList3">
+	                    <tbody>
+							<tr>
+								<td><input type="checkbox" name="sign_product[]"  value="Printing machinery" id="CheckBoxList3_0"><label for="CheckBoxList3_0">Printing machinery</label></td>
+								<td><input type="checkbox" name="sign_product[]"  value="Engraving machinery" id="CheckBoxList3_2"><label for="CheckBoxList3_2">Engraving machinery</label></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="sign_product[]"  value="CNC-cutting machinery" id="CheckBoxList3_1"><label for="CheckBoxList3_1">CNC-cutting machinery</label></td>
+								<td><input type="checkbox" name="sign_product[]"  value="Inks" id="CheckBoxList3_3"><label for="CheckBoxList3_3">Inks</label></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="sign_product[]"  value="Relative consumables" id="CheckBoxList3_1"><label for="CheckBoxList3_1">Relative consumables</label></td>
+								<td><input type="checkbox" name="sign_product[]"  value="Indoor signage" id="CheckBoxList3_3"><label for="CheckBoxList3_3">Indoor signage</label></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="sign_product[]"  value="Outdoor signage" id="CheckBoxList3_1"><label for="CheckBoxList3_1">Outdoor signage</label></td>
+								<td><input type="checkbox" name="sign_product[]"  value="Displays" id="CheckBoxList3_3"><label for="CheckBoxList3_3">Displays</label></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="sign_product[]"  value="Intelligent signs" id="CheckBoxList3_1"><label for="CheckBoxList3_1">Intelligent signs</label></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+                  Other signs products<input type="text" class="un_input" id="sign_product_other" name="sign_product_other"><span id="expoPurposeTips" class="errorMsg"></span></span></li>
+            </ul>
+            <h3><strong>Your purchasing intention of LED products</strong><i style="color:Red；font-size:26px;vertical-align: bottom;">*</i></h3>
+            <ul>
+                <li><h5>&nbsp;</h5><span>
+                <table border="0" style="width:100%;" id="CheckBoxList4">
+	                <tbody>
+						<tr>
+							<td><input type="checkbox" name="led_product[]" value="LED illumination"  id="CheckBoxList4_0"><label for="CheckBoxList4_0">LED illumination</label></td>
+							<td><input type="checkbox" name="led_product[]" value="LED chips"  id="CheckBoxList4_3"><label for="CheckBoxList4_3">LED chips</label></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="led_product[]" value="LED modules"  id="CheckBoxList4_1"><label for="CheckBoxList4_1">LED modules</label></td>
+							<td><input type="checkbox" name="led_product[]" value="LED screen"  id="CheckBoxList4_4"><label for="CheckBoxList4_4">LED screen</label></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="led_product[]" value="LED equipment"  id="CheckBoxList4_2"><label >LED equipment</label></td>
+							<td><input type="checkbox" name="led_product[]" value="LED new technology"  id="CheckBoxList4_2"><label >LED new technology</label></td>
+						</tr>
+					</tbody>
+				</table>
+                Other LED products
+				<input type="text"   class="un_input" id="led_product_other" name="led_product_other"><span id="knowTips" class="errorMsg"></span></span></li>
+            </ul>
+            <h3><strong>Your suggestions about ISLE</strong></h3>
+            <ul>
+                <li>
+				<input type="text" class="un_input" id="suggestion" name="suggestion" style="width:100%;height:30px;"></li>
+                </li>
+            </ul>
+        </div>
+		<input class="tijiao"  name="dosubmit" type="submit" value="submit" />
+    </form>
+</div>
+<div style="clear:both;"></div>
+<!--底部-->
+<script>
+$(function(){	   
+	var validate = $("#myform").validate({
+		rules:{
+			name: {
+				required : true
+			},
+//			sex: {
+//				required : true
+//			},
+//			position: {
+//				required : true
+//			},
+			email: {
+				required : true
+			},
+			phone_country: {
+				required : true
+			},
+			phone_area: {
+				required : true
+			},
+			phone_number: {
+				required : true
+			},
+			company_name: {
+				required : true
+			},
+//			country: {
+//				required : true
+//			},
+//			tel_country: {
+//				required : true
+//			},
+//			tel_area: {
+//				required : true
+//			},
+//			tel_number: {
+//				required : true
+//			},
+			address: {
+				required : true
+			},
+			about_isle: {
+				required : true
+			},
+			'sign_product[]': {
+				required : true
+			},
+			'led_product[]': {
+				required : true
+			}
+			
+		},
+		onkeyup: false,
+		onfocusout: false,
+		messages:{
+			name: {
+				required : 'Please enter your name'
+			},
+			sex: {
+				required : 'Please Select your Account Type'
+			},
+			position: {
+				required : 'Please enter your position'
+			},
+			email: {
+				required : 'Please enter a valid Email Address'
+			},
+			phone_country: {
+				required : 'Please enter your Country Code'
+			},
+			phone_area: {
+				required : 'Please enter your Area Code'
+			},
+			phone_number: {
+				required : 'Please enter your Phone Number'
+			},
+			company_name: {
+				required : 'Please enter your Company Name'
+			},
+			country: {
+				required : 'Please enter your country'
+			},
+			tel_country: {
+				required : 'Please enter your Country Code'
+			},
+			tel_area: {
+				required : 'Please enter your Area Code'
+			},
+			tel_number: {
+				required : 'Please enter your tel Number'
+			},
+			address: {
+				required : 'Please enter your address'
+			},
+			about_isle: {
+				required : 'Please Select How do you find out the information about ISLE'
+			},
+			'sign_product[]': {
+				required : 'Please Select Your purchasing intention of Sign Products'
+			},
+			'led_product[]': {
+				required : 'Please Select Your purchasing intention of LED products'
+			}
+
+
+		},
+	    success: function(label) {
+		   label.html("&nbsp;").addClass("right");
+	    },
+		showErrors : function(errorMap, errorList) {  
+			var msg = "";  
+			$.each(errorList, function(i, v) {  
+				alert(v.message);
+				return false;
+			});  
+	    }  
+	});	
+
+});
+</script>
+{template "content","footer"}

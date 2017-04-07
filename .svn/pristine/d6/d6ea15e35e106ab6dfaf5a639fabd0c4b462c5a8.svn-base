@@ -1,0 +1,38 @@
+.navs ul li{float:left;text-align:center;font-size:16px;  width:auto;padding: 0px 15px;}
+
+.banner .banner_l {
+  font-size: 23px;
+  }
+ .banner .banner_l .en{
+ text-align:right;
+  }
+  .banner .banner_l .en p{
+	color: #c71620;
+   }
+   .banner .banner_l .en p:nth-child(5){
+	color: #999;
+   }
+
+.banner .banner_l p {
+padding:0;
+}
+.banner .date {
+  padding-top: 90px;
+  padding-left: 20px;
+  font-size: 39px;
+}
+
+.comm .lt dl {
+    padding-right: 45px;
+}
+
+
+
+
+
+
+
+
+
+
+

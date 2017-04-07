@@ -1,0 +1,82 @@
+{template "content","header"}
+
+<link href="{LED_PATH}css/repast_list.css?v=1" rel="stylesheet" />
+<!--头部结束-->
+
+
+<!-- 内容 -->
+<div class="container comm ">
+{template "content","position_local"}
+
+	<div class="lt p2th">
+	   {template "content","left_service_box"}
+	</div>
+    
+    <div class="right right_content rightArea " style="  width: 740px;">
+            <div class="p2th">
+                <h1 class="CaterSearch">餐饮查询及预订</h1>
+               <ul class="ul_list ">
+                    <li id="ul_list_li1">	
+                            <h2>分类:</h2>
+                           
+							<div class="adiv">
+								{loop filters('style_cate',$modelid,'','&step=2') $r}
+	                            	{$r[menu]}|
+	                            {/loop}
+                            </div>
+							<div class="clearboth"></div>
+                    </li>
+                    <li id="ul_list_li2">	
+                            <h2>商区:</h2>
+                           <div class="adiv">
+								{loop filters('area',$modelid,'','&step=2') $r}
+	                            	{$r[menu]}|
+	                            {/loop}
+                            </div>
+                    </li>
+                    <div class="clearboth"></div>
+                </ul>           
+            </div>
+    
+
+
+            <div class="ulbox p3th">
+                <ul class="" id="">
+                    {php $sql = structure_filters_sql($modelid)}
+                    {php $urlrule = makeurlrule()}
+                    {pc:content action="lists" catid="$catid" where="$sql" num="10" order="id DESC" page="$page" moreinfo="1" urlrule="$urlrule"}
+                        {loop $data $r}
+                        <li>
+                           <a href="{$r[url]}"><img src="{thumb($r[thumb],205,132)}" width="205px" height="132px"></a>
+                            <div class="p_box">
+                                <h2> <a href="{$r[url]}"> {$r['title']}</a></h2>
+                                <p>地址： {$r['address']}</p>
+                                <p>商区： {box('area',$r['area'],$modelid)}</p>
+                                <p>电话： {$r['mobile']}</p>
+                                
+                            </div>
+                        
+                            <div class="price">
+                                <p class="p1">人均 ：</p>
+                                <p class="p2">{$r['avgprice']}</p>
+                            </div>
+                        </li>
+
+                        {/loop}
+                 </ul>
+                <div id="pages" class="text-c">{$pages}</div>
+                {/pc}
+            </div>
+
+                
+        </div>
+
+</div>
+    </div>
+  
+  
+<div class="clearboth"></div>
+
+<!-- 内容END -->
+<!--底部开始-->
+{template "content","footer"}

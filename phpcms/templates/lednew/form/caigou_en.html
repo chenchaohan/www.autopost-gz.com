@@ -1,0 +1,332 @@
+{template "content","header"}
+<script src="{JS_PATH}jquery.validate.js"></script>
+<!--内容开始-->
+<div class="content">
+	<div class="caigou_left">
+		<div class="dj_title">
+			<img src="{LED_PATH}/images/dj_title_en.png" />
+		</div>
+		
+		<div class="my_form">
+		{if 0}
+			<p>ISLE 2016 pre-registration system has closed now. Please access our on-site registration point to apply your visitor card. Any inquiries please contact with us: 86-20-89268268 / 86-20-89268292</p>
+		{else}
+			<form  class="" action="{siteurl(1)}/index.php?m=form&c=index&a=caigou_cn" id="myform" method="post">
+				<div style="margin-left: -20px; margin-top: -20px; margin-bottom: 5px;">(Notice: options marked with <span style="color:red;font-size:25px;vertical-align: middle;">“*”</span> are mandatory, please fill in correctly.)</div>
+				<div class="form_tit">Personal Information</div>
+				  <table class="table3" border="0">
+					  <tr>
+						<td class="cz_title">Title<span>*</span></td>
+						<td>
+						<select id="title" name="title" class="ty_txt">
+							<option value="" >--Please select--</option>
+							<option value="Mr">Mr</option>
+							<option value="Ms">Ms</option>
+						</select>
+						</td>
+					  </tr>
+					  <tr>
+						<td class="cz_title">Name<span>*</span></td>
+						<td><input class="ty_txt" type="text" id="name" name="name" /></td>
+					  </tr>
+					  <tr>
+						<td class="cz_title">Country/Region<span>*</span></td>
+						<td><input class="ty_txt" type="text" id="country" name="country" /></td>
+					  </tr>
+					  <tr>
+						<td class="cz_title">Telephone</td>
+						<td><input class="ty_txt" type="text" id="tel" name="tel" /></td>
+					  </tr>
+					  <tr>
+						<td class="cz_title">Mobile<span></span></td>
+						<td><input class="ty_txt" type="text" id="mobile" name="mobile" /></td>
+					  </tr>
+					  <tr>
+						<td class="cz_title">Email<span>*</span></td>
+						<td>
+						<input class="ty_txt" type="text" id="email" name="email" />
+							<p style="color:red;margin-top:10px;font-weight: bold;font-size:12px;">
+							Please fill in your valid email address so that we can send the “Registration Confirmation” to you.</p>
+						</td>
+					  </tr>
+				</table>
+				<div class="form_tit" style="margin-top:37px;">Company Information</div>
+				  <table class="table3" border="0">
+					  <tr>
+						<td class="cz_title">Company Name<span>*</span></td>
+						<td><input class="ty_txt" type="text" id="company_name" name="company_name"  /></td>
+					  </tr>
+					  <tr>
+						<td class="cz_title">Position</td>
+						<td><input class="ty_txt" type="text" id="position" name="position" /></td>
+					  </tr>
+					  <tr>
+						<td class="cz_title">Company Address<span>*</span></td>
+						<td><input class="ty_txt" type="text" id="address" name="address" /></td>
+					  </tr>
+					  <tr>
+						<td class="cz_title" colspan=2>Your Purchasing Intention<span>*</span></td>
+					  </tr>
+					   <tr>
+						<td class="checkbox_c" colspan=2 style="line-height: 25px">
+								<table>
+								<tr>
+									<input type="checkbox" name="interest_product[]" value="LED Display & Application" />
+										<span>LED Display & Application</span>
+									<input type="checkbox" name="interest_product[]" value="DLP Splicing, LCD/PDP Splicing"/>
+										<span style=";">DLP Splicing, LCD/PDP Splicing</span>
+									<input type="checkbox" name="interest_product[]"  value="Projection Display"/>
+										<span>Projection Display</span>
+									<input type="checkbox" name="interest_product[]"  value="Digital Signage"/>
+										<span>Digital Signage</span>
+								<br/>
+									<input type="checkbox" name="interest_product[]" value="Tablet Display" />
+										<span style=";">Tablet Display</span>
+									<input type="checkbox" name="interest_product[]" value="LED Lighting"/>
+										<span style=";">LED Lighting</span>
+									<input type="checkbox" name="interest_product[]"  value="LED New Technology"/>
+										<span>LED New Technology</span>
+									<input type="checkbox" name="interest_product[]" value="Signs, Display & Related Materials" />
+										<span style=";">Signs, Display & Related Materials</span>
+								<br/>
+									<input type="checkbox" name="interest_product[]" value="Engraving Machines"/>
+										<span style=";">Engraving Machines</span>
+									<input type="checkbox" name="interest_product[]"  value="Bending Machines"/>
+										<span>Bending Machines</span>
+									<input type="checkbox" name="interest_product[]"  value="Light Boxes"/>
+										<span>Light Boxes</span>
+									<input type="checkbox" name="interest_product[]"  value="Advertising Signs"/>
+										<span>Advertising Signs</span>
+								<br/>
+									<input type="checkbox" name="interest_product[]"  value="Inkjet Printing Equipment"/>
+										<span>Inkjet Printing Equipment</span>
+									
+					
+						</table>
+						</td>
+					  </tr>
+
+					  <tr>
+						<td class="cz_title" colspan=2 style="vertical-align:middle;">How do you know about ISLE<span>*</span></td>
+					  </tr>
+					  <tr>
+						<td class="checkbox_c" colspan=2 style="line-height: 25px">
+								<input type="radio" name="learn_isle" value="Advertising promotion" />
+								<span>Advertising promotion</span>
+								<input type="radio" name="learn_isle" value="Internet searching"/>
+								<span>Internet searching</span>
+								<input type="radio" name="learn_isle"  value="Email invitation"/>
+								<span>Email invitation</span>
+								<input type="radio" name="learn_isle"  value="Postal invitation"/>
+								<span>Postal invitation</span>
+								<input type="radio" name="learn_isle" value="Other exhibitions" />
+								<span>Other exhibitions</span>
+								<br />
+								<input type="radio" name="learn_isle"  value="1"/>
+								<span>Recommended by ISLE exhibitor<input type="text" name="czs_rec" value="" style="border:0;border-bottom:1px solid #000;width: 120px"/>(Please fill in the complete company name of this exhibitor)</span>
+								<br />
+								<input type="radio" name="learn_isle" value="Recommended by other buyers"/>
+								<span>Recommended by other buyers</span>
+								<input type="radio" name="learn_isle" value="2" />
+								<span>Other<input type="text" name="other" value="" style="border:0;border-bottom:1px solid #000;width: 120px"/></span>
+						</td>
+					  </tr>
+					  <tr style="display:block;margin-top:30px;margin-bottom:10px;">
+						<td class="cz_title" colspan=2>Your Suggestion to ISLE</td>
+					  </tr>
+					  <tr>
+						<td class="cz_title" colspan=2>
+							<textarea id="suggestion" name="suggestion" rows="" cols="" style="width:500px;height:45px;border:1px solid #e7e7e7;"></textarea>
+						</td>
+					  </tr>
+
+					  <tr style="margin:10px 0;">
+						<td class="checkbox_c" colspan=2>
+							<input type="checkbox" name="is_friend" id="is_friend" value="1" id="toggle"/>&nbsp;<span>To apply ISLE pre-registration for your friends</span></td>
+					  </tr>
+					  <tr class="link_info">
+						<td class="cz_title">Title<span>*</span></td>
+						<td><input class="ty_txt" type="text"id="f_title" name="f_title"  /></td>
+					  </tr>
+					  <tr class="link_info">
+						<td class="cz_title">Name<span>*</span></td>
+						<td><input class="ty_txt" type="text" id="f_name" name="f_name" /></td>
+					  </tr>
+					  <tr class="link_info">
+						<td class="cz_title">Telephone</td>
+						<td><input class="ty_txt" type="text" id="f_tel" name="f_tel" /></td>
+					  </tr>
+					  <tr class="link_info">
+						<td class="cz_title">Mobile<span>*</span></td>
+						<td><input class="ty_txt" type="text" id="f_mobile" name="f_mobile" /></td>
+					  </tr>
+					  <tr class="link_info">
+						<td class="cz_title">Email<span>*</span></td>
+						<td>
+						<input class="ty_txt" type="text" id="f_email" name="f_email" />
+							<p style="color:red;margin-top:10px;font-weight: bold;font-size:14px;">
+							Please fill in the valid email address of the invitee so that we can send the registration confirmation to  the invitee</p>
+						</td>
+					  </tr>
+					  <tr class="link_info">
+						<td class="cz_title">Company Name<span>*</span></td>
+						<td><input class="ty_txt" type="text" id="f_company_name" name="f_company_name"  /></td>
+					  </tr>
+					  <tr class="link_info">
+						<td class="cz_title">Position</td>
+						<td><input class="ty_txt" type="text" id="f_position" name="f_position" /></td>
+					  </tr>
+
+					  <tr class="link_info" style="height:30px;color:red;margin-top:10px;font-weight: bold;font-size:12px;">
+						<td class="" colspan=2>Please fill in the correct information and we will send the registration confirmation to your companion.</td>
+					  </tr>
+					  <tr>
+						<td class="" colspan=2 style="font-size:14px;">If you have any inquiries, please contact with us: Email：isle@cantonfairad.com or Tel: +86-20-8926 8292 / +86-20-8926 8268
+						</td>
+					  </tr>
+				</table>
+			<div style="text-align:center;margin-top:15px;">
+				<input type="hidden" name="lan" value="2">
+				<input class="tijiao"  name="dosubmit" type="image" src="{LED_PATH}images/tijiao_btn_en.jpg" value="Submit" />
+			</div>
+			</form>
+			{/if}
+		</div>
+	</div>
+	
+	{template "content","right_side"}
+
+</div>
+
+<div style="clear:both;"></div>
+<!--底部-->
+<script>
+$(function(){
+	$("#is_friend").click(function() {
+		if($(this).is(":checked")){
+			$(".link_info").show(500);
+			add_rules();
+		}else{
+			$(".link_info").hide(500);
+			del_rules();
+		}
+    });
+
+	var validate = $("#myform").validate({
+		rules:{
+			title: {
+				required : true
+			},
+			name: {
+				required : true
+			},
+			country: {
+				required : true
+			},
+//			mobile: {
+//				required : true
+//			},
+			email: {
+				required : true
+			},
+			company_name: {
+				required : true
+			},
+			address: {
+				required : true
+			},
+			'interest_product[]': {
+				required : true
+			},
+			learn_isle: {
+				required : true
+			}
+			
+		},
+		onclick:false,
+		onkeyup: false,
+		onfocusout: false,
+		messages:{
+			title: {
+				required : 'Appellation cannot be empty!'
+			},
+			name: {
+				required : 'Name cannot be empty!'
+			},
+			country: {
+				required : 'country cannot be empty!'
+			},
+			email: {
+				required : 'Email cannot be empty!'
+			},
+			company_name: {
+				required : 'CompanyName cannot be empty!'
+			},
+			address: {
+				required : 'Address cannot be empty!'
+			},
+			'interest_product[]': {
+				required : 'Please select your purchasing intention'
+			},
+			learn_isle: {
+				required : 'Please select how do you know about ISLE'
+			}
+		},
+	    success: function(label) {
+		   label.html("&nbsp;").addClass("right");
+	    },
+		showErrors : function(errorMap, errorList) {  
+			var msg = "";  
+			$.each(errorList, function(i, v) {  
+				alert(v.message);
+				return false;
+			});  
+	    }  
+	});	
+
+});
+
+//添加规则
+function add_rules() {
+	$("#f_title").rules("add", { 
+		required : true,
+		messages: { 
+			required: "Appellation cannot be empty!"
+		} 
+	});
+	$("#f_name").rules("add", { 
+		required : true,
+		messages: { 
+			required: "Name cannot be empty!"
+		} 
+	});
+	$("#f_mobile").rules("add", { 
+		required : true,
+		messages: { 
+			required: "Mobile cannot be empty!"
+		} 
+	});
+	$("#f_email").rules("add", { 
+		required : true,
+		messages: { 
+			required: "Email cannot be empty!"
+		} 
+	});
+	$("#f_company_name").rules("add", { 
+		required : true,
+		messages: { 
+			required: "CompanyName cannot be empty!"
+		} 
+	});
+}
+//先删除默认规则
+function del_rules() {
+	$("#f_title").rules("remove");
+	$("#f_name").rules("remove");
+	$("#f_mobile").rules("remove");
+	$("#f_email").rules("remove");
+	$("#f_company_name").rules("remove");
+}
+</script>
+
+{template "content","footer"}

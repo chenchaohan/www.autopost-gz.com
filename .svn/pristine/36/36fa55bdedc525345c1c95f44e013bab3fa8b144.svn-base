@@ -1,0 +1,50 @@
+{template "content","header"}
+
+<link href="{LED_PATH}css/traffic_detail.css?v=1" rel="stylesheet" />
+
+<!--头部结束-->
+<!-- 内容 -->
+<div class="container comm layout">
+
+	<div class="cf">
+		<div class="leftArea fl">
+			<div class="tit">
+				<div class="titBorder titTraffic">
+					<h2>交通指引</h2>
+				</div>
+			</div>
+			<div class="g_nav">
+			{php $i=1;$catid=37;}
+				{pc:content action="category" siteid="1" catid="$catid" }
+				{loop $data $r}
+					<div class="g_nav_tit {if $i!=1} m {/if}">
+						{$r['catname']}
+					</div>
+					
+					<div class="guide_icon">
+						{pc:get sql="SELECT catid, catname, url,description FROM phpcms_category WHERE parentid = $r[catid] ORDER BY listorder ASC" return="data"}
+							{loop $data $n $r}
+								<a href="{$r['url']}" class="icon{$i}"><span {if $_GET['catid']==$r['catid']}class="on" {/if}>{$r['catname']}</span></a>
+								{php $i++;}
+							{/loop}
+						{/pc}
+					</div>
+					
+				
+				{/loop}
+			{/pc}
+			</div>
+			          
+		</div>
+		<div class="rightArea fr">
+			<div class="detail">
+				<h2>{$title}</h2>
+				{$content}
+			</div>
+		</div>
+	</div>
+	
+</div>
+<!-- 内容END -->
+<!--底部开始-->
+{template "content","footer"}

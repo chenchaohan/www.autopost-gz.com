@@ -1,0 +1,93 @@
+{template "content","header"}
+
+<link href="{LED_PATH}css/traffic.css?v=1" rel="stylesheet" />
+<!--头部结束-->
+
+
+<!-- 内容 -->
+<div class="container comm ">
+<div class="p_nav">&nbsp; ※&nbsp;<span ><a href="{siteurl($siteid)}">首页</a> &gt; {catpos($catid)}</span> </div>
+
+	<div class="lt p2th">
+	   {template "content","left_service_ly_box"}
+	</div>
+    
+    <div class="fr rightArea ">
+            <div class="tit">
+                <div class="titBorder titTraffic">
+                    <h2>交通指引</h2>
+                </div>
+            </div>
+            <div class="detail">
+                <div class="d_top cf">
+                     {php $i=1;$catid=48;}
+                    <div class="d_top_tit fl">
+                        {$CATEGORYS[$catid]['catname']}
+                    </div>
+                    <div class="d_top_go row3 guide_icon  fr cf">
+                       
+                        {pc:get sql="SELECT catid, catname, url,description FROM phpcms_category WHERE parentid = $catid ORDER BY listorder ASC" return="data"}
+                            {loop $data $r}
+                        <div class="icon{$i}"><a href="{$r['url']}"><span>{$r['catname']}</span></a></div>
+                            {php $i++;}
+                            {/loop}
+                        {/pc}
+                                        
+                    </div>
+                </div>
+                <div class="d_content cf">
+                {php $i=4;$catid=49;}
+                    <div class="d_img fl">
+                        <img src="{thumb($CATEGORYS[$catid]['image'],238)}" alt="">
+                    </div>
+                    <div class="d_txt">
+                        <div class="d_txt_title">广交会展馆位置</div>
+                          {nl2br($CATEGORYS[$catid]['description'])}
+                    </div>
+                </div>
+                <div class="d_top cf">
+                    
+                    <div class="d_top_tit fl">
+                        {$CATEGORYS[$catid]['catname']}
+                    </div>
+                    <div class="d_top_go row5 guide_icon  fr cf">
+                    {pc:get sql="SELECT catid, catname, url,description FROM phpcms_category WHERE parentid = $catid ORDER BY listorder ASC" return="data"}
+                        {loop $data $r}
+                             <div class="icon{$i}"><a href="{$r['url']}"><span>{$r['catname']}</span></a></div>
+                        {php $i++;}
+                        {/loop}
+                    {/pc}
+                    </div>
+                </div>
+
+                <div class="d_content cf">
+                     {php $i=9;$catid=50;}
+                    <div class="d_img fl">
+                        <img src="{thumb($CATEGORYS[$catid]['image'],238)}" alt="">
+                    </div>
+                    <div class="d_txt">
+
+                        <div class="d_txt_title">展馆及周边交通</div>
+                        <div class=" row2 guide_icon ">
+
+                            {pc:get sql="SELECT catid, catname, url,description FROM phpcms_category WHERE parentid = $catid ORDER BY listorder ASC" return="data"}
+                                {loop $data $r}
+                                     <div class="icon{$i}"><a href="{$r['url']}"><span>{$r['catname']}</span></a></div>
+                                {php $i++;}
+                                {/loop}
+                            {/pc}
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+
+</div>
+  
+
+<!-- 内容END -->
+<!--底部开始-->
+{template "content","footer"}

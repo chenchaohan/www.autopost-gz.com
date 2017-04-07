@@ -1,0 +1,51 @@
+{template "content","header"}
+
+<link href="{LED_PATH}css/news.css?v=1" rel="stylesheet" />
+
+<!--main-->
+<div class="container comm about">
+
+            <!--lo_linksstart-->
+            {template "content","position_local"}
+
+            <div style="clear: both;"></div>
+            <!--lo_linksend-->
+            <div class="lt">
+               {template "content","left_box"}
+            </div>
+            <div class="rt">
+                <!--新闻列表-->
+                <div class="newsWarp">
+                    <div class="rt-head">
+                        <h4>{$CATEGORYS[$catid]['catname']}</h4>
+                    </div>
+                    
+                <ul class="newsList">
+                {pc:content action="lists" catid="$catid" order="listorder DESC,id DESC" page="$page" num="10"}
+                    {loop $data $n $r}
+                    <li>
+                        <p class="subTitle"><a href="{$r[url]}">{str_cut($r['title'], 72)}</a><span>[{date('Y-m-d',$r[inputtime])}]</span></p>
+                        <p class="cot">
+                            {str_cut($r['description'], 500)}
+                           
+                        </p>
+
+
+                    </li>
+                    {/loop}
+                {/pc}
+            
+                </ul>
+    
+                <div id="pages">
+                    {$pages}
+                </div>
+
+                </div>
+            </div>
+
+        <div style="clear: both;"></div>
+    </div>
+
+
+{template "content","footer"}

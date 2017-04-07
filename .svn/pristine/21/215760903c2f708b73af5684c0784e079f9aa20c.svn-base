@@ -1,0 +1,1 @@
+INSERT INTO `phpcms_module` VALUES ('form', '表单', '', '0', '1.0', '', 'array (\n  1 => \n  array (\n    \'is_post\' => \'1\',\n    \'enablecheckcode\' => \'0\',\n  ),\n)', '0', '0', '2014-07-26', '2014-07-26');

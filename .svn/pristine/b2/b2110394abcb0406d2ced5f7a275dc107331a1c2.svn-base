@@ -1,0 +1,744 @@
+					
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--[if lte IE 8]>
+<!DOCTYPE html>
+<html lang="en">
+<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta content="telephone=no" name="format-detection">
+<title> 广州国际汽车用品、零配件及售后服务展览会</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="baidu-site-verification" content="u51hUCB5cG" />
+
+<!--cn-->
+<link href="http://www.autopost-gz.com/statics/led/css/style.css?v=11" rel="stylesheet" />
+<script src="http://www.autopost-gz.com/statics/led/js/jquery-1.8.3.min.js"></script>
+<script src="http://www.autopost-gz.com/statics/led/js/marquee.js"></script>
+<script src="http://www.autopost-gz.com/statics/led/js/tips.js"></script>
+<script type="text/javascript">
+	var G = {
+		SITE_URL: 'http://www.autopost-gz.com/',
+		LANGUAGE_ID: 1,
+		IMG_PATH: 'http://www.autopost-gz.com/statics/images/',
+		CSS_PATH: 'http://www.autopost-gz.com/statics/css/',
+		JS_PATH: 'http://www.autopost-gz.com/statics/js/'
+	};
+	//ck mobile
+	//获取url中的参数
+	function getUrlParam(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+		var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+		if (r != null) return unescape(r[2]); return null; //返回参数值
+	}
+	//ck mobile
+	function browserRedirect() {
+		var is_jump = getUrlParam('type');
+		if(!is_jump || is_jump==''){
+			var sUserAgent = navigator.userAgent.toLowerCase();
+			var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+			var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+			var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+			var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+			var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+			var bIsAndroid = sUserAgent.match(/android/i) == "android";
+			var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+			var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+			if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+			window.location.href="http://wx2.intexh.com/index.php?g=Wap&a=index&token=zobyef1411957121&diymenu=1";
+			}
+		}else{
+			//alert();
+		}
+	}
+	//browserRedirect();
+</script>
+	<script type="text/javascript">
+		//首页判断
+		//browserRedirect();
+	</script>
+
+</head>
+
+<body>
+
+
+<!-- 头部 -->
+<header>
+	<div class="header">
+		<div class="head_member">
+
+			<div class="fr" style="display: none;">
+				<ul>
+											<li id="login"><a href="javascript:;" class="j-login">登录</a></li>
+						<li id="register"><a href="javascript:;" class="j-register">注册</a></li>
+										<li>
+											<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=lists&catid=16" switch-language="1">English</a>
+										</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="head_top">
+			<div class="head_logo fl">
+				<h1>
+									<a href="http://www.autopost-gz.com/"><img src="http://www.autopost-gz.com/statics/led/images/head_logo.png" /></a>
+								</h1>
+			</div>
+			<div class="fr">
+                <dl >
+                	<dd class="lang">
+                							<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=lists&catid=16" switch-language="1">English</a>
+										</dd>
+                    
+                </dl>
+                <!--<p class="headsearch">
+                    <input type="text" placeholder="请输入关键字" class="txtKeyword" style="line-height: 20px;"><a href="javascript:void(0);" class="btnSerch">搜索</a>
+                </p>-->
+            </div>
+		</div>
+
+	
+
+	</div>
+</header>
+<!-- 头部end -->
+
+
+<!-- 导航 -->
+<div class="navs">
+	<ul class="nav" id="menu">
+		<li class="nav_fgx">
+		<span>
+					<a href="http://www.autopost-gz.com">
+				首页</a></span>
+		</li>
+		
+		<!--分类导航-->
+																		            				<!-- 一级菜单-->
+				<li class="item nav_fgx"><a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=lists&catid=66" id="menu_1" >展会概况</a>
+					
+				</li>
+										<!-- 一级菜单-->
+				<li class="item nav_fgx"><a href="http://www.autopost-gz.com/index.php?m=consult&c=index&a=exhibition_form&catid=18&lang=1" id="menu_2" >参展商</a>
+					
+				</li>
+										<!-- 一级菜单-->
+				<li class="item nav_fgx"><a href="http://www.autopost-gz.com//index.php?m=consult&c=index&a=visitorregister&catid=25&lang=1" id="menu_3" >观众</a>
+					
+				</li>
+										<!-- 一级菜单-->
+				<li class="item nav_fgx"><a href="http://www.autopost-gz.com//index.php?m=content&c=index&a=lists&catid=31" id="menu_4" >新闻资讯</a>
+					
+				</li>
+										<!-- 一级菜单-->
+				<li class="item nav_fgx"><a href="http://www.autopost-gz.com//index.php?m=content&c=index&a=lists&catid=36" id="menu_5" >商旅服务</a>
+					
+				</li>
+										<!-- 一级菜单-->
+				<li class="item"><a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=lists&catid=112" id="menu_6" >同期活动</a>
+					
+				</li>
+										<!-- 一级菜单-->
+				<li class="item nav_fgx"><a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=lists&catid=42" id="menu_7" >联系我们</a>
+					
+				</li>
+								<!-- 一级菜单 end -->
+		<div class="clear"></div>
+	</ul>
+</div>
+
+<script type="text/javascript">
+var urlstr = location.href;　　　　//获取浏览器的url
+var urlstatus=false;　　　　　　　　//标记
+　//遍历导航div
+/*$("#menu a").each(function () {
+	if ((urlstr + '/').indexOf($(this).attr('ref')) > -1&&$(this).attr('ref')!='') {
+		var m_flag= $(this).attr('m_flag'); //alert('#menu_'+m_flag);
+		$('#menu_'+m_flag).addClass('m-hover'); urlstatus = true;
+	} else {
+		$(this).removeClass('m-hover');
+	}
+});
+
+//当前样式保持
+  if (!urlstatus) {$("#menu a").eq(0).addClass('m-hover'); }
+  */
+</script>
+
+<!-- 导航end -->
+<!-- 登录弹窗 -->
+<div class="reg_box register-box">
+		<form action="http://www.autopost-gz.com/index.php?m=member&c=index&a=register&siteid=1" method="post" name="myform">
+			<p class="tips" style="color: red; height: 18px; text-align: center;"></p>
+			<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户名：</span><input type="text" name="username" id="register-username" /></p>
+			<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮箱：</span><input type="text" name="email" id="email" /></p>
+			<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：</span><input type="password" name="password" id="password" /></p>
+            <p><span>确认密码：</span><input type="password" name="pwdconfirm" id="repassword" /></p>
+			<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;验证码：</span><input type="text" name="code" size="8" id="register-code" class="input-text"></p>
+			<p style="padding-bottom: 0; padding-left: 120px;margin: 10px 0;"><img id='code_img' onclick='this.src=this.src+"&"+Math.random()' src='http://www.autopost-gz.com/api.php?op=checkcode&code_len=5&font_size=14&width=120&height=26&font_color=&background='></p>
+			<input type="hidden" name="siteid" value="1" />
+			<input type="hidden" name="modelid" value="10" />
+			<input type="hidden" name="dosubmit" value="同意注册协议，提交注册" />
+            <button type="submit" class="reg_btn j-submit-register" />立即注册</button>
+            <p class="reg_login">
+            	我有账号&nbsp;&nbsp;
+            	<a href="javascript:;" class="j-login-switch">立即登录</a>
+            </p>
+        </form>
+    </div>
+    <div class="reg_box login-box">
+		<form action="http://www.autopost-gz.com/index.php?m=member&c=index&a=login" method="post" name="myform">
+			<p class="tips" style="color: red; height: 18px; text-align: center;"></p>
+			<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户名：</span><input type="text" name="username" id="login-username" /></p>
+			<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 密码：</span><input type="password" name="password" id="login-password" /></p>
+			<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;验证码：</span><input type="text" name="code" size="8" id="login-code" class="input-text"></p>
+			<p style="padding-bottom: 0; padding-left: 120px;margin: 10px 0;"><img id='code_img' onclick='this.src=this.src+"&"+Math.random()' src='http://www.autopost-gz.com/api.php?op=checkcode&code_len=5&font_size=14&width=120&height=26&font_color=&background='></p>
+			<input type="hidden" name="dosubmit" value="立即登录" />
+            <button type="submit" class="reg_btn j-submit-login" />立即登录</button>
+            <p class="reg_login">
+            	还没账号&nbsp;&nbsp;
+            	<a href="javascript:;" class="j-register-switch">立即注册</a>
+            </p>
+        </form>
+    </div>
+
+<div class="mask"></div>
+
+<script type="text/javascript">
+//菜单hover
+$('#menu_1').tips({relation: '#sub_menu_1',tgClass: 'm-hover'});
+$('#menu_2').tips({relation: '#sub_menu_2',tgClass: 'm-hover'});
+$('#menu_3').tips({relation: '#sub_menu_3',tgClass: 'm-hover'});
+$('#menu_4').tips({relation: '#sub_menu_4',tgClass: 'm-hover'});
+$('#menu_5').tips({relation: '#sub_menu_5',tgClass: 'm-hover'});
+
+
+	$(document).ready(function() {
+
+		$('.navs li').hover(function() {
+			$(this).find('dd').css('display', 'block');
+		}, function() {
+			$(this).find('dd').css('display', 'none');
+		});
+	//登录注册按钮
+		$('.j-register').live('click',function() {
+			$('.register-box').css('display', 'block');
+			$(".mask").css("display","block");
+			$(".mask-click").css("display","block");
+			$(".login-box").css("display","none");
+			return false;
+		});
+
+		$('.j-login').live('click',function() {
+			$('.login-box').css('display', 'block');
+			$(".mask").css("display","block");
+			$(".mask-click").css("display","block");
+			$(".register-box").css("display","none");
+			return false;
+		});
+//表单验证注册
+		$('.j-submit-register').click(function() {
+			var tip = $('.tips');
+			var username = $('#register-username');
+			var email = $('#email');
+			var password = $('#password');
+			var repassword = $('#repassword');
+			var code = $('#register-code');
+
+			if(username.val() == '') {
+				username.focus();
+				tip.html('请输入用户名').fadeIn();
+				return false;
+			} else if(username.val().length < 3 || username.val().length > 16) {
+				username.focus();
+				tip.html('用户名长度必须在3-16个字符之间').fadeIn();
+				return false;
+			} else if(email.val() == '') {
+				email.focus();
+				tip.html('请输入邮箱').fadeIn();
+				return false;
+			} else if(!/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/.test(email.val())) {
+				email.focus();
+				tip.html('邮箱格式不对').fadeIn();
+				return false;
+			} else if(password.val() == '') {
+				password.focus();
+				tip.html('请输入密码').fadeIn();
+				return false;
+			} else if(!/^[^\s]{6,16}$/.test(password.val())) {
+				password.focus();
+				tip.html('密码区分大小写，由6-16个英文字母和数字组成').fadeIn();
+				return false;
+			} else if(repassword.val() == '') {
+				repassword.focus();
+				tip.html('密码不一致').fadeIn();
+				return false;
+			} else if(password.val() != repassword.val()) {
+				repassword.focus();
+				tip.html('密码不一致').fadeIn();
+				return false;
+			} else if(code.val() == '') {
+				code.focus();
+				tip.html('请输入验证码').fadeIn();
+				return false;
+			} else if(code.val().length != 5) {
+				code.focus();
+				tip.html('验证码长度只能为5位').fadeIn();
+				return false;
+			}
+
+			tip.fadeOut();
+		});
+//表单验证登录
+		$('.j-submit-login').click(function() {
+			var tip = $('.tips');
+			var username = $('#username');
+			var password = $('#login-password');
+			var code = $('#login-code');
+
+			if(username.val() == '') {
+				username.focus();
+				tip.html('请输入用户名').fadeIn();
+				return false;
+			} else if(password.val() == '') {
+				password.focus();
+				tip.html('请输入密码').fadeIn();
+				return false;
+			} else if(!/^[^\s]{6,16}$/.test(password.val())) {
+				password.focus();
+				tip.html('密码区分大小写，由6-16个英文字母和数字组成').fadeIn();
+				return false;
+			} else if(code.val() == '') {
+				code.focus();
+				tip.html('请输入验证码').fadeIn();
+				return false;
+			} else if(code.val().length != 5) {
+				code.focus();
+				tip.html('验证码长度只能为5位').fadeIn();
+				return false;
+			}
+
+			tip.fadeOut();
+		});
+
+		$('.j-login-switch').click(function(){
+			$(".register-box").css("display","none");
+			$(".login-box").css("display","block");
+		});
+
+		$('.j-register-switch').click(function(){
+			$(".login-box").css("display","none");
+			$(".register-box").css("display","block");
+		});
+
+		$('.mask-click').click(function(){
+			$(".register-box").css("display","none");
+			$(".login-box").css("display","none");
+			$(".mask").css("display","none");
+			$(".mask-click").css("display","none");
+		});
+		$('.mask').click(function(){
+			$(".register-box").css("display","none");
+			$(".login-box").css("display","none");
+			$(".mask").css("display","none");
+			$(".mask-click").css("display","none");
+		});
+	});
+
+$(function(){
+	//倒计时 1
+	var timedate= new Date("2017/02/15"); 
+	var now = new Date(); 
+	var date = timedate.getTime() - now.getTime(); 
+	var time = Math.floor(date / (1000 * 60 * 60 * 24)); 
+	var myH=Math.floor(date / (1000*60*60)) % 24;
+	var flag = false;
+	if(time>= 0){
+		var time = time;
+	}else if(time<=-1 && time>=-3){
+		var time =  "进行中";
+		flag = true;
+	}else{
+		var time =  "已结束";
+		flag = true;
+	}
+	if(flag){//2016/2/15
+		$('.shijian').css({'font-size':'23px','line-height':'30px'});
+		$('.day').css({'margin-top':'0px'});
+		$('.show_date .title').hide();
+		$('.day_txt').hide();
+	}
+    $(".shijian").html(time);
+
+	
+	//倒计时 2
+	var timedate= new Date("2016/07/01"); 
+	var now = new Date(); 
+	var date = timedate.getTime() - now.getTime(); 
+	var time = Math.floor(date / (1000 * 60 * 60 * 24)); 
+	var myH=Math.floor(date / (1000*60*60)) % 24;
+	var flag = false;
+	if(time>= 0){
+		var time = time;
+	}else if(time<=-1 && time>=-2){
+		var time =  "进行中";
+		flag = true;
+	}else{
+		var time =  "已结束";
+		flag = true;
+	}
+	if(flag){//2016/2/15
+		$('.show_date_r .shijian').css({'font-size':'23px','line-height':'30px'});
+		$('.show_date_r .day').css({'margin-top':'0px'});
+		$('.show_date_r .title').hide();
+		$('.show_date_r .day_txt').hide();
+	}
+    $(".show_date_r .shijian").html(time);
+
+});
+//检测IE浏览器版本是否过低
+//var b_name = navigator.appName;
+//var b_version = navigator.appVersion;
+//var version = b_version.split(";");
+//var trim_version = version[1].replace(/[ ]/g, "");
+//if (b_name == "Microsoft Internet Explorer") {
+	///*如果是IE6或者IE7,MSIE8.0*/
+	//if (trim_version == "MSIE8.0" || trim_version == "MSIE7.0" || trim_version == "MSIE6.0") {
+		//alert("您IE浏览器版本过低，请使用IE9以上的浏览器更佳");
+	//}
+//}
+</script>
+
+<!-- banner -->
+
+<!-- banner end -->
+<link rel="stylesheet" href="http://www.autopost-gz.com/statics/led/css/swiper.min.css" />
+<div class="w_fs_index_banner">
+       <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="swiper-wrapper">
+		  
+												<div class="swiper-slide">
+					<a href="#">
+											<img src="http://www.autopost-gz.com/statics/led/images/banner_banner0.jpg"  style="width: 100%;" class="spread" alt="">
+										</a>
+				</div>
+												
+        <!-- Add Pagination 
+        <div class="swiper-pagination"></div>-->
+    </div>
+
+</div>
+<script type="text/javascript" src="http://www.autopost-gz.com/statics/led/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+    <script>
+
+    //var newSlideSize = function slideSize(){
+        //var w = Math.ceil($(".swiper-container").width()/3/*--调整高度---*/);
+        //$(".swiper-container,.swiper-wrapper,.swiper-slide").height(w);
+    //};
+    //newSlideSize();
+    //$(window).resize(function(){
+        //newSlideSize();
+    //});
+$(document).ready(function () { 
+	var mySwiper = new Swiper('.swiper-container',{
+      
+        loop:false,
+        autoplay:5000,
+        paginationClickable: true,
+		centeredSlides: true,
+        onSlideChangeStart: function(){
+            //回调函数
+        }
+    });
+});
+</script>
+	
+<!-- 主体内容 -->
+<div class="container">
+	<!-- banner -->
+	<div class="banner">
+		<div class="banner_l fl">
+					<div class="fl">
+				<p>欢迎参加</p>
+				<p>第25届广州国际汽车用品、</p>
+				<p>零配件及售后服务展览会</p>
+				<p>距离开幕还有</p>
+
+			</div>
+					<div class="fl date">
+				<span>107</span>天			</div>
+		</div>
+		<div class="banner_r fr">
+						<p><a href="http://www.autopost-gz.com/index.php?m=consult&c=index&a=exhibition_form&catid=18&lang=1"><img src="http://www.autopost-gz.com/statics/led/images/index_cz_btn_cn.jpg" /></a></p>
+			<p><a href="http://www.autopost-gz.com/index.php?m=consult&c=index&a=visitorregister&catid=25&lang=1"><img src="http://www.autopost-gz.com/statics/led/images/index_dj_btn_cn.jpg" /></a></p>
+			<p><a href="#"><img src="http://www.autopost-gz.com/statics/led/images/index_login_btn_cn.jpg" /></a></p>
+
+
+		</div>
+	</div>
+	<!-- banner end -->
+
+	<!-- 分类 -->
+	<div class="news_box">
+								<div class="news_index_box fl ">
+				<div class="block_index_title"><a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=lists&catid=31">更多>></a><span>展会新闻</span></div>
+				<div class="cate_desc">
+					<ul>
+																										<li><a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=31&id=35" target="_blank">汽车销售管理办法有望近期出台将打破品牌授权销售单一模</a><span>2017/03/29</span></li>
+																					<li><a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=31&id=33" target="_blank">【中国汽车电子百强品牌全球大典】启动发布会成功召开</a><span>2017/03/28</span></li>
+																					<li><a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=31&id=11" target="_blank">春季展“南电子”的格局怎样破的？</a><span>2017/03/16</span></li>
+																					<li><a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=31&id=12" target="_blank">凝心聚力 携手同行</a><span>2017/03/16</span></li>
+																					<li><a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=31&id=1" target="_blank">百日奇迹！2016中贸雅森广州展盛大开幕</a><span>2017/03/16</span></li>
+																					<li><a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=31&id=22" target="_blank">后市场服务驱动时代，洗车机企业再聚广州</a><span>2017/03/16</span></li>
+																								</ul>
+				</div>
+			</div>
+								<div class="news_index_box  fr ">
+				<div class="block_index_title"><a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=lists&catid=32">更多>></a><span>展商动态</span></div>
+				<div class="cate_desc">
+					<ul>
+																										<li><a href="http://www.heimweg.com.cn/" target="_blank">香港百孚洋行上海代表处</a><span>2017/03/16</span></li>
+																					<li><a href="http://www.musicson.net/" target="_blank">上海妙声科技有限公司</a><span>2017/03/16</span></li>
+																					<li><a href="http://www.carori.com.hk/" target="_blank">香百年（香港）国际香薰用品有限公司</a><span>2017/03/16</span></li>
+																					<li><a href="http://www.gzvv.com/" target="_blank">广州威威汽车精品有限公司</a><span>2017/03/16</span></li>
+																					<li><a href="http://www.gzchebang.com/" target="_blank">广州车邦汽车用品</a><span>2017/03/16</span></li>
+																					<li><a href="http://www.fil-art.com/" target="_blank">广州市欧芭贸易有限公司</a><span>2017/03/16</span></li>
+																								</ul>
+				</div>
+			</div>
+					
+		<div style="clear: both;"></div>
+	</div>
+	<!-- 分类 end -->
+		<div onclick="window.location.href='http://www.autopost-gz.com/index.php?m=consult&c=index&a=exhibition_form&catid=18&lang=1'">
+		<img src="http://www.autopost-gz.com/statics/led/images/middle_banner_cn.jpg" style=" width: 100%;">
+
+		</div>
+	
+	<div class="block_index_box block_consult_box" >
+		<div class="block_index_title"><a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=lists&catid=43">更多>></a><span>展商推荐</span></div>
+		<div id="mar1">
+			<ul>
+					                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=332" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318114101970.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=331" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318114044815.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=330" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318114023373.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=329" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318114006623.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=328" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113949866.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=326" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113925747.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=325" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113900986.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=324" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113835569.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=323" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113815369.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=322" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113750155.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=321" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113646520.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=320" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113618709.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=319" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113556233.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=318" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113532698.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=317" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113503676.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=316" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113209454.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=315" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113147616.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=314" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113124808.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=313" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113101270.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=show&catid=43&id=312" target="_blank"><img src="http://www.autopost-gz.com/uploadfile/2017/0318/20170318113029829.jpg" /></a>
+					</li>
+	                	            			</ul>
+		</div>
+	</div>
+	<div class="block_index_box block_consult_box partner_box">
+		<div class="block_index_title"><a href="http://www.autopost-gz.com/index.php?m=content&c=index&a=lists&catid=44">更多>></a><span>合作媒体</span></div>
+		<div id="mar2">
+			<ul>
+					                 
+					<li>
+						<a href="http://www.stardaily.com.cn/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322044941113.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.bitauto.com/zhuanti/qichezhoukan/bw/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322044928241.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.jinghua.cn/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322044910703.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.0755cm.com/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322044854977.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.motorchina.com/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322044829738.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://auto.gasgoo.com/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322044820868.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.chinaauto.net/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322044752883.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.top4x4.com.cn/portal.php" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322044541358.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.niuche.com/modi/cases" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322044508781.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://paper.sznews.com/qcdb/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322044454880.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.chextx.com/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322044440268.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.idailycar.com/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322044426777.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.chinaautosupplier.com/sanzi.html" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322044310839.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://yueysj.zazhi.com.cn/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322044039192.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://yueysj.zazhi.com.cn/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322043905918.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.lube-info.com/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322043843306.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="www.tuanche.com" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322043559727.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.fawan.com/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322043544363.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://dzb.38mhw.com/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322043456225.jpg" /></a>
+					</li>
+	                 
+					<li>
+						<a href="http://www.yicai.com/" target="_blank"><img src="http://5th-street.pinewer.com/uploadfile/2017/0322/20170322043420887.jpg" /></a>
+					</li>
+	                	            			</ul>
+		</div>
+	</div>
+
+
+</div>
+<!-- 主体内容 end -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#mar1").marquee({
+        direction:"right",
+        speed:30
+    });
+	$("#mar2").marquee({
+        direction:"right",
+        speed:30
+    });
+});
+    
+</script>
+
+<!-- 脚部 -->
+<div style="clear: both;"></div>
+<footer class="footer">
+    <div class="comWidth">
+
+        <div class="footer_t f_l f_box2">
+            <p>版权所有：中国对外贸易广州展览总公司、北京雅森国际展览有限公司</p>
+      
+            
+        </div>
+        <div class="footer_t f_r f_box3">
+            <img src="http://www.autopost-gz.com/statics/led/images/wx_qrcode.jpg">
+            <p style="text-align: center;color: #000;">汽车用品展</p>
+        </div>
+        
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</footer>
+</body>
+</html>

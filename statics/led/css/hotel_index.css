@@ -1,0 +1,513 @@
+.m{margin-top: 50px;}
+.mm{margin-top: 30px;}
+.indexLeft{width: 506px; margin-right: 30px;}
+.indexRight{width: 454px; }
+.indexLeft a,
+.indexRight a{color: #000;}
+
+.adv{
+	width: 506px;
+	/*height: 223px;*/
+	position: relative;
+	/* overflow: hidden; */
+}
+.adv_box{
+	width: 505px;
+	height: 220px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.adv_box ul li{float: left;}
+.adv_box ul li img{
+	width: 505px;
+	height: 189px;
+}
+
+.adv_box .control,
+.map_ad .control{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.adv_box .control span,
+.map_ad .control span {
+	display:inline-block;
+	_display:inline;
+	_zoom:1; 
+	width:20px;
+	height:20px;
+	overflow: hidden;
+	line-height:20px;
+	text-align:center;
+	font-size:14px;
+	margin-right:10px;
+	cursor:pointer;
+	color:#565656;
+	background: #d3d3d3;
+	background: url(control.png)\9;
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="tpl/zh/images/control_ie6.png");
+	border-radius: 50%;
+}
+.adv_box .control span.on,
+.map_ad .control span.on {
+	color:#fff;
+	background:#ce1219; 
+	background: url(control.png) 0 -20px\9;
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="tpl/zh/images/control_ie6_on.png");
+}
+
+
+.adv .tips{
+	padding-top: 10px;
+	color: #ce1219;
+}
+
+.tit{
+	padding-bottom:12px; 
+	border-bottom: 1px solid #ce1219;
+	position: relative;
+	height: 24px;
+	color: #ce1219;
+}
+.tit h2{
+	font-size: 24px;
+	line-height: 1;
+	float:left;
+	background-position: 0 -6px;
+}
+.tit em{
+	font-style: normal;
+	margin-top:6px;
+	text-align:center;
+	float:right;
+	font-size:14px;
+	margin-right:128px;
+}
+
+/*.tit{
+	padding-bottom:12px; 
+	border-bottom: 1px solid #ce1219;
+	position: relative;
+	height: 24px;
+	color: #ce1219;
+}
+.tit h2{
+	font-size: 24px;
+	line-height: 1;
+	float:left;
+	background-position: 0 -6px;
+}
+.tit em{
+	font-style: normal;
+	margin-top:-5px;
+	text-align:center;
+	float:right;
+	color:#000;
+	font-size:12px;
+	width:100px;
+}*/
+
+.tit a{color: #000;font-size:14px;}
+.recomList ul{
+	border-bottom: 1px dotted #585858;
+	padding-bottom: 14px;
+}
+.recomList ul li{
+	float: left;
+	width: 168px;
+	margin-top: 16px;
+	height:38px
+}
+.map_con{margin-top: 15px;}
+.map_con dl{margin-bottom: 20px;}
+.map_con dl dt,
+.map_con dl dd{float: left;}
+.map_con dl dt{width: 60px; text-align: right; font-weight: bold; line-height: 20px; padding-right: 5px;}
+.map_con dl dd{width: 430px;}
+.map_con dl dd a{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	padding: 0 8px; color: #000; line-height: 22px;
+}
+.map_con dl dd a:hover{text-decoration: none;background: #ce1219;color: #fff;}
+.map_con{
+	word-wrap: break-word; 
+	word-break: normal; 
+}
+
+#map_canvas{width: 410px; height: 122px; margin-left: 60px;}
+.magnifier a{
+	display: block;
+	width: 75px;
+	color: #5f5f5f;
+	background: url(magnifier.png) no-repeat 0 center;
+	margin: 0px auto;
+	line-height: 28px;
+	padding: 0 0 0 20px;
+}
+
+
+.booking{
+	width: 100%;
+	/*height: 223px;*/
+	overflow: hidden;
+	background: #fffcf7;
+	
+}
+.bookingBox{padding: 5px 15px 10px;border: 4px solid #ce1219;}
+.booking_tit h2{
+	float: left;
+	font-size: 24px;
+	line-height: 1;
+	color: #ce1219;
+}
+
+.booking_tit em{
+	float: right;
+	font-style: normal;
+	line-height: 24px;
+}
+.bookingCon{font-size: 14px; margin-top: 10px;}
+.bookingCon dl{padding-bottom: 10px;}
+.bookingCon dl.startBox{padding-bottom: 0px;}
+.bookingCon dl dt,
+.bookingCon dl dd{float: left; width: 330px;}
+.bookingCon dl .date{width: auto;}
+.bookingCon dl dt{width: 74px; font-weight: bold; }
+.bookingCon dl dd label{
+	display:inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+#FromDate,
+#EndDate{
+	width: 280px;
+	padding-left: 5px;
+	margin-right: 20px;
+	background: #fff url(date.gif) no-repeat 270px 6px;
+}
+
+.bookingCon input{padding: 4px 5px; border: 1px solid #dfdfdf;}
+.bookingCon .price,
+.bookingCon .star{padding: 0; border: 0;}
+.bookingCon .otherPrice{float: left;}
+.bookingCon .otherPrice input{width: 50px;}
+.bookingCon .btn_search2{
+	float: right;
+	width: 64px;
+	height: 28px;
+	background-position:  0 -170px;
+	padding: 0;
+	border: none;
+	  background: #E4401A;
+  color: #fff;
+}
+.dateBox label{padding-right: 20px; }
+.radioBox label,.startBox label{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+}
+.radioBox label{width: 106px}
+.startBox label{margin-right: 5px;}
+.radioBox label input,.startBox label input{
+	float: left;
+	display: inline;
+	height: 13px;
+	margin: 4px 2px 0 0;
+	/*margin-top: 3px\9;*/
+	_margin: 4px -3px 0 -3px;
+	line-height: normal;
+	vertical-align: middle;
+}
+
+
+.hotelList{width: 100%; }
+.hotelList ul{margin-right: -17px; margin-top: 35px;}
+.hotelList ul li {
+	width: 140px;
+	height: 90px;
+	float: left;
+	display: inline;
+	margin-right: 17px;
+	margin-top: 10px;
+	overflow: hidden;
+	text-align: center;
+}
+.listImg{
+	width: 136px;
+	height: 60px;
+	overflow: hidden;
+	text-align: center;
+	border: 1px solid black;
+
+}
+
+.listImg img{
+	max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+}
+.listTitle{
+	margin-top: 10px;
+	font-size: 13px;
+	font-weight: bold;
+}
+.listTip{
+	font-size: 12px;
+	color: #636363;
+}
+
+.map_ad{
+	width: 505px;
+	height: 145px;
+	margin-top: 10px;
+	overflow: hidden;
+	position: relative;
+}
+.map_ad ul{
+	position: absolute;
+	height: 120px;
+	overflow: hidden;
+}
+.map_ad ul li{
+	width: 505px;
+	height: 120px;
+	float: left;
+}
+.map_ad ul li img{
+	width: 505px;
+	height: 120px;
+}
+.map_ad_left,
+.map_ad_right{
+	position: absolute;
+	z-index: 99;
+	text-indent: -9999px;
+	cursor: pointer;
+	overflow: hidden;
+	width: 40px;
+	height: 80px;
+}
+
+
+.cwdn{ overflow:hidden;}
+.main{border:4px solid #CE1219;width:385px;height:231px;padding-left:69px;overflow:hidden;float:left;}
+.tabnav{position:absolute;z-index:100;margin-left:4px;width:24px; background:#fae4f0;margin-top:4px; height:231px;width:68px; border-right:1px solid #A37F83;}
+.tabnav ul{list-style:none;padding:0;margin:0;}
+.tabnav ul li{width:68px; height:30px;margin:0px auto;text-align:center;cursor:pointer; border-bottom:1px solid #a37f83;border-right:none;line-height:30px; font-weight:bold; color:#6d696a;font-family:"Microsoft YaHei"; font-size:15px;}
+.tabnav ul li.on{ background:#fff; border-right:1px solid #fff;position:relative;_left:1px; color:#CE1219;}
+.dis{display:block;}
+.undis{display:none;}
+.bookingBox{border:none; padding:10px 16px 5px 7px;_padding:5px 7px 5px; _padding-right:16px;}
+.bookingCon dl dt{width:60px;}
+#FromDate, #EndDate{margin-right:0px; padding-right:14px;}
+.booking_tit h2{ font-size:12px;line-height:24px; font-weight:bold;font-family:"Microsoft YaHei"; background:url(map_bot.jpg) bottom center no-repeat;padding-bottom:1px; position:relative; _top:5px;}
+.indexLeft .cwdn a, .indexRight .cwdn a{color:#CE1219;font-family:"Microsoft YaHei"; font-weight:bold; line-height:20px;}
+.booking_tit{ border-bottom:2px solid #cecece; height:20px;}
+.booking_tit em{display:block;height:24px; position:relative; _top:8px;}
+.bookingCon dl dt{font-family:"Microsoft YaHei"; color:#3E4241;line-height:24px;text-align:center;}
+.mudidi dl dt{ float:left;}
+.mudidi select{width:302px;border:1px solid #D4D4D4; padding:5px;}
+.jdjibie select{width:121px;border:1px solid #D4D4D4; padding:5px;}
+.bookingCon dl dd{ width:120px;}
+.bookingCon dl{ padding-bottom:12px;}
+.guanjianci input{ width:100px; color:#999;}
+.bookingCon .btn_search2{ width:116px;}
+.map_con_right{ float:right; overflow:hidden; padding-top:15px;}
+.map_con_left{ float:left; overflow:hidden; padding-top:15px;}
+.map_con{ clear:both;overflow:hidden;}
+#footer{ margin-top:0; background:#fff;}
+.tip{max-width:200px;border:1px solid #CE1219;padding:8px;background:#fff;color:#000;}
+.indexLeft{margin-right:20px;}
+.indexRight{width:463px;}
+
+
+.button{ background:url(button.png);}
+.panner {
+ 
+margin-left:14px;
+
+}
+.panner p{
+  font-size:14px;
+  color:#e83227;
+}
+.leftorhhh{
+margin-left:9px;
+}
+.orhhh{
+  padding-left:5px;
+  color:#e83227;
+  font-size:16px;
+}
+
+.orhhhen{
+  padding-left:5px;
+  color:#e83227;
+  font-size:12px;
+}
+
+
+a{text-decoration:none;}
+
+a:hover{text-decoration:underline;}
+
+
+
+ul,li,ol{
+
+	list-style: none outside none;
+
+}
+
+
+
+table{
+
+	border-collapse:collapse;
+
+	border-spacing:0;
+
+}
+
+
+
+
+
+.cf:before,.cf:after {
+
+	content:"";
+
+	display:table;
+
+}
+
+.cf:after { clear:both; overflow:hidden;}/* For IE 6/7 (trigger hasLayout) */
+
+.cf { zoom:1; }
+
+/* -------------------------------------------------
+
+ * form
+
+ * -------------------------------------------------
+
+*/
+
+button,input,select,textarea{
+
+    margin: 0;
+
+	outline: 0 none;
+
+    vertical-align: baseline;
+
+    *vertical-align: middle;
+
+}
+
+textarea{
+
+    overflow: auto;
+
+    vertical-align: top; 
+
+	resize:none;
+
+}
+
+button,input{
+
+    line-height: normal;
+
+}
+
+button,
+
+html input[type="button"], 
+
+input[type="reset"],
+
+input[type="submit"],
+
+.submit-btn{
+
+	-webkit-appearance: button; 
+
+	cursor: pointer; 
+
+	*overflow: visible;
+
+}
+
+button[disabled],
+
+input[disabled],
+
+.disable{
+
+	cursor: default;
+
+}
+
+input[type="checkbox"],
+
+input[type="radio"],
+
+.form-radio,
+
+.form-checkbox{
+
+	box-sizing: border-box;
+
+	padding: 0;
+
+	*height: 13px;
+
+	*width: 13px;
+
+}
+
+fieldset{
+
+	border: 1px solid #c0c0c0;
+
+	margin: 0 2px 18px;
+
+	padding: 0.35em 0.625em 0.75em;
+
+}
+
+legend{
+
+	border: 0;
+
+	padding: 0;
+
+	white-space: normal;
+
+	*margin-left: -7px;
+
+}
+
+button::-moz-focus-inner,
+
+input::-moz-focus-inner{
+
+	border: 0;
+
+	padding: 0;
+
+}

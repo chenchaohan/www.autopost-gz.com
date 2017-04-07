@@ -1,0 +1,443 @@
+{template "content","config"}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--[if lte IE 8]>
+<!DOCTYPE html>
+<html lang="en">
+<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta content="telephone=no" name="format-detection">
+<title> {php echo $id = $languageId == 1 ? '广州国际汽车用品、零配件及售后服务展览会' : 'Guangzhou International Exhibition of Automotive Products, Auto Parts & Post-market Services';}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<meta name="baidu-site-verification" content="u51hUCB5cG" />
+
+{if $languageId != 1}
+<link href="{LED_PATH}css/style.css?v=11" rel="stylesheet" />
+<link href="{LED_PATH}css/style_en.css?v=11" rel="stylesheet" />
+{else}
+<!--cn-->
+<link href="{LED_PATH}css/style.css?v=11" rel="stylesheet" />
+{/if}
+<script src="{LED_PATH}js/jquery-1.8.3.min.js"></script>
+<script src="{LED_PATH}js/marquee.js"></script>
+<script src="{LED_PATH}js/tips.js"></script>
+<script type="text/javascript">
+	var G = {
+		SITE_URL: '{APP_PATH}',
+		LANGUAGE_ID: {$languageId},
+		IMG_PATH: '{IMG_PATH}',
+		CSS_PATH: '{CSS_PATH}',
+		JS_PATH: '{JS_PATH}'
+	};
+	//ck mobile
+	//获取url中的参数
+	function getUrlParam(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+		var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+		if (r != null) return unescape(r[2]); return null; //返回参数值
+	}
+	//ck mobile
+	function browserRedirect() {
+		var is_jump = getUrlParam('type');
+		if(!is_jump || is_jump==''){
+			var sUserAgent = navigator.userAgent.toLowerCase();
+			var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+			var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+			var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+			var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+			var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+			var bIsAndroid = sUserAgent.match(/android/i) == "android";
+			var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+			var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+			if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+			window.location.href="http://wx2.intexh.com/index.php?g=Wap&a=index&token=zobyef1411957121&diymenu=1";
+			}
+		}else{
+			//alert();
+		}
+	}
+	//browserRedirect();
+</script>
+{if !$catid || $_GET['m']=='public_index' || in_array($catid,array(9,10,102,103))}
+	<script type="text/javascript">
+		//首页判断
+		//browserRedirect();
+	</script>
+{/if}
+
+</head>
+<?php $userid= param::get_cookie('_userid');?>
+
+<body>
+
+
+<!-- 头部 -->
+<header>
+	<div class="header">
+		<div class="head_member">
+
+			<div class="fr" style="display: none;">
+				<ul>
+					{if empty($userid)}
+						<li id="login"><a href="javascript:;" class="j-login">{$_LANG['LOGIN'][$languageId]}</a></li>
+						<li id="register"><a href="javascript:;" class="j-register">{$_LANG['REGISTER'][$languageId]}</a></li>
+					{else}
+						<li id="login"><a href="javascript:;"><?php echo str_replace(array('(',')'),'',get_nickname());?></a></li>
+						<li id="register"><a href="{APP_PATH}index.php?m=member&c=index&a=logout&siteid={$siteid}">
+						<?php echo $languageId==1?'退出':'Logout'?></a></li>
+					{/if}
+					<li>
+					{if $languageId == 1}
+						<a href="{$CATEGORYS[16]['url']}" switch-language="1">{$_LANG['LANGUAGE_ENGLISH']}</a>
+					{else}
+						<a href="{siteurl($siteid)}" switch-language="1">{$_LANG['LANGUAGE_CHINESE']}</a>
+						
+					{/if}
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="head_top">
+			<div class="head_logo fl">
+				<h1>
+				{if $languageId == 1}
+					<a href="{siteurl($siteid)}/"><img src="{LED_PATH}images/head_logo.png" /></a>
+				{else}
+					<a href="{$CATEGORYS[16]['url']}"><img src="{LED_PATH}images/head_logo.png" /></a>
+				{/if}
+				</h1>
+			</div>
+			<div class="fr">
+                <dl >
+                	<dd class="lang">
+                	{if $languageId == 1}
+						<a href="{$CATEGORYS[16]['url']}" switch-language="1">{$_LANG['LANGUAGE_ENGLISH']}</a>
+					{else}
+						<a href="{siteurl($siteid)}" switch-language="1">{$_LANG['LANGUAGE_CHINESE']}</a>
+						
+					{/if}
+					</dd>
+                    
+                </dl>
+                <!--<p class="headsearch">
+                    <input type="text" placeholder="请输入关键字" class="txtKeyword" style="line-height: 20px;"><a href="javascript:void(0);" class="btnSerch">{$_LANG['SEARCH'][$languageId]}</a>
+                </p>-->
+            </div>
+		</div>
+
+	
+
+	</div>
+</header>
+<!-- 头部end -->
+
+
+<!-- 导航 -->
+<div class="navs">
+	<ul class="nav" id="menu">
+		<li class="nav_fgx">
+		<span>
+		{if $languageId == 1}
+			<a href="{siteurl($siteid)}">
+		{else}
+			<a href="{$CATEGORYS[16]['url']}">
+		{/if}
+		{php echo $id = $languageId == 1 ? '首页' : 'Home';}</a></span>
+		</li>
+		{php $id = $languageId == 1 ? 15 : 16;$key=1;$sub_catid=$languageId == 1 ? 35 : 73;}
+
+		<!--分类导航-->
+		<?php $id = $_GET['catid']==$sub_catid?$_GET['catid']:$id;?>
+		{pc:get sql="SELECT parentid FROM phpcms_category WHERE catid = $catid LIMIT 0, 1--" return="data"}
+			{php $getCategory = $data[0];}
+		{/pc}
+		{if $getCategory['parentid'] == $sub_catid}
+			{php $id = $getCategory['parentid'];}
+		{/if}
+		{if $id==$sub_catid}
+			{pc:get sql="SELECT catid, catname, url,description FROM phpcms_category WHERE parentid = $id ORDER BY listorder ASC" num="7" return="data"}
+		{else}
+			{pc:content action="category" siteid="1" catid="$id" num="7" }
+		{/if}
+            {loop $data $k $r}
+				<!-- 一级菜单-->
+				<li {if $key!=6}class="item nav_fgx"{else}class="item"{/if}><a {if $r['description']}href="{APP_PATH}{$r['description']}"{else}href="{$r['url']}"{/if} id="menu_{$key}" {if $_GET['nu']==$key}class="m-hover"{/if}>{$r['catname']}</a>
+					
+				</li>
+			{php $key++;}
+			{/loop}
+		{/pc}<!-- 一级菜单 end -->
+		<div class="clear"></div>
+	</ul>
+</div>
+
+<script type="text/javascript">
+var urlstr = location.href;　　　　//获取浏览器的url
+var urlstatus=false;　　　　　　　　//标记
+　//遍历导航div
+/*$("#menu a").each(function () {
+	if ((urlstr + '/').indexOf($(this).attr('ref')) > -1&&$(this).attr('ref')!='') {
+		var m_flag= $(this).attr('m_flag'); //alert('#menu_'+m_flag);
+		$('#menu_'+m_flag).addClass('m-hover'); urlstatus = true;
+	} else {
+		$(this).removeClass('m-hover');
+	}
+});
+
+//当前样式保持
+  if (!urlstatus) {$("#menu a").eq(0).addClass('m-hover'); }
+  */
+</script>
+
+<!-- 导航end -->
+<!-- 登录弹窗 -->
+<div class="reg_box register-box">
+		<form action="{APP_PATH}index.php?m=member&c=index&a=register&siteid={$siteid}" method="post" name="myform">
+			<p class="tips" style="color: red; height: 18px; text-align: center;"></p>
+			<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$_LANG['USER_NAME'][$languageId]}：</span><input type="text" name="username" id="register-username" /></p>
+			<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$_LANG['MAIL'][$languageId]}：</span><input type="text" name="email" id="email" /></p>
+			<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$_LANG['PASSWORD'][$languageId]}：</span><input type="password" name="password" id="password" /></p>
+            <p><span>{$_LANG['CONFIRM_PASSWORD'][$languageId]}：</span><input type="password" name="pwdconfirm" id="repassword" /></p>
+			<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$_LANG['VERIFY_CODE'][$languageId]}：</span><input type="text" name="code" size="8" id="register-code" class="input-text"></p>
+			<p style="padding-bottom: 0; padding-left: 120px;margin: 10px 0;"><img id='code_img' onclick='this.src=this.src+"&"+Math.random()' src='{APP_PATH}api.php?op=checkcode&code_len=5&font_size=14&width=120&height=26&font_color=&background='></p>
+			<input type="hidden" name="siteid" value="{$siteid}" />
+			<input type="hidden" name="modelid" value="10" />
+			<input type="hidden" name="dosubmit" value="同意注册协议，提交注册" />
+            <button type="submit" class="reg_btn j-submit-register" />{$_LANG['IMMEDIATELY_REGISTER'][$languageId]}</button>
+            <p class="reg_login">
+            	{php echo $id = $languageId == 1 ? '我有账号' : 'No account';}&nbsp;&nbsp;
+            	<a href="javascript:;" class="j-login-switch">{$_LANG['IMMEDIATELY_LOGIN'][$languageId]}</a>
+            </p>
+        </form>
+    </div>
+    <div class="reg_box login-box">
+		<form action="{APP_PATH}index.php?m=member&c=index&a=login" method="post" name="myform">
+			<p class="tips" style="color: red; height: 18px; text-align: center;"></p>
+			<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$_LANG['USER_NAME'][$languageId]}：</span><input type="text" name="username" id="login-username" /></p>
+			<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {$_LANG['PASSWORD'][$languageId]}：</span><input type="password" name="password" id="login-password" /></p>
+			<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$_LANG['VERIFY_CODE'][$languageId]}：</span><input type="text" name="code" size="8" id="login-code" class="input-text"></p>
+			<p style="padding-bottom: 0; padding-left: 120px;margin: 10px 0;"><img id='code_img' onclick='this.src=this.src+"&"+Math.random()' src='{APP_PATH}api.php?op=checkcode&code_len=5&font_size=14&width=120&height=26&font_color=&background='></p>
+			<input type="hidden" name="dosubmit" value="{$_LANG['IMMEDIATELY_LOGIN'][$languageId]}" />
+            <button type="submit" class="reg_btn j-submit-login" />{$_LANG['IMMEDIATELY_LOGIN'][$languageId]}</button>
+            <p class="reg_login">
+            	{php echo $id = $languageId == 1 ? '还没账号' : 'There are accounts';}&nbsp;&nbsp;
+            	<a href="javascript:;" class="j-register-switch">{$_LANG['IMMEDIATELY_REGISTER'][$languageId]}</a>
+            </p>
+        </form>
+    </div>
+
+<div class="mask"></div>
+
+<script type="text/javascript">
+//菜单hover
+$('#menu_1').tips({relation: '#sub_menu_1',tgClass: 'm-hover'});
+$('#menu_2').tips({relation: '#sub_menu_2',tgClass: 'm-hover'});
+$('#menu_3').tips({relation: '#sub_menu_3',tgClass: 'm-hover'});
+$('#menu_4').tips({relation: '#sub_menu_4',tgClass: 'm-hover'});
+$('#menu_5').tips({relation: '#sub_menu_5',tgClass: 'm-hover'});
+
+
+	$(document).ready(function() {
+
+		$('.navs li').hover(function() {
+			$(this).find('dd').css('display', 'block');
+		}, function() {
+			$(this).find('dd').css('display', 'none');
+		});
+	//登录注册按钮
+		$('.j-register').live('click',function() {
+			$('.register-box').css('display', 'block');
+			$(".mask").css("display","block");
+			$(".mask-click").css("display","block");
+			$(".login-box").css("display","none");
+			return false;
+		});
+
+		$('.j-login').live('click',function() {
+			$('.login-box').css('display', 'block');
+			$(".mask").css("display","block");
+			$(".mask-click").css("display","block");
+			$(".register-box").css("display","none");
+			return false;
+		});
+//表单验证注册
+		$('.j-submit-register').click(function() {
+			var tip = $('.tips');
+			var username = $('#register-username');
+			var email = $('#email');
+			var password = $('#password');
+			var repassword = $('#repassword');
+			var code = $('#register-code');
+
+			if(username.val() == '') {
+				username.focus();
+				tip.html('{$_LANG['VERIFICATION_ENTER_USERNAME'][$languageId]}').fadeIn();
+				return false;
+			} else if(username.val().length < 3 || username.val().length > 16) {
+				username.focus();
+				tip.html('{$_LANG['USERNAME_LENGTH'][$languageId]}').fadeIn();
+				return false;
+			} else if(email.val() == '') {
+				email.focus();
+				tip.html('{$_LANG['VERIFICATION_ENTER_MAIL'][$languageId]}').fadeIn();
+				return false;
+			} else if(!/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/.test(email.val())) {
+				email.focus();
+				tip.html('{$_LANG['VERIFICATION_MAIL_WRONG_FORMAT'][$languageId]}').fadeIn();
+				return false;
+			} else if(password.val() == '') {
+				password.focus();
+				tip.html('{$_LANG['VERIFICATION_ENTER_PASSWORD'][$languageId]}').fadeIn();
+				return false;
+			} else if(!/^[^\s]{6,16}$/.test(password.val())) {
+				password.focus();
+				tip.html('{$_LANG['VERIFICATION_PASSWORD_WRONG_FORMAT2'][$languageId]}').fadeIn();
+				return false;
+			} else if(repassword.val() == '') {
+				repassword.focus();
+				tip.html('{$_LANG['VERIFICATION_PASSWORDS_DO_NOT_MATCH'][$languageId]}').fadeIn();
+				return false;
+			} else if(password.val() != repassword.val()) {
+				repassword.focus();
+				tip.html('{$_LANG['VERIFICATION_PASSWORDS_DO_NOT_MATCH'][$languageId]}').fadeIn();
+				return false;
+			} else if(code.val() == '') {
+				code.focus();
+				tip.html('{$_LANG['VERIFICATION_ENTER_CODE'][$languageId]}').fadeIn();
+				return false;
+			} else if(code.val().length != 5) {
+				code.focus();
+				tip.html('{php echo $id = $languageId == 1 ? '验证码长度只能为5位' : 'Verification code length only for five';}').fadeIn();
+				return false;
+			}
+
+			tip.fadeOut();
+		});
+//表单验证登录
+		$('.j-submit-login').click(function() {
+			var tip = $('.tips');
+			var username = $('#username');
+			var password = $('#login-password');
+			var code = $('#login-code');
+
+			if(username.val() == '') {
+				username.focus();
+				tip.html('{$_LANG['VERIFICATION_ENTER_USERNAME'][$languageId]}').fadeIn();
+				return false;
+			} else if(password.val() == '') {
+				password.focus();
+				tip.html('{$_LANG['VERIFICATION_ENTER_PASSWORD'][$languageId]}').fadeIn();
+				return false;
+			} else if(!/^[^\s]{6,16}$/.test(password.val())) {
+				password.focus();
+				tip.html('{$_LANG['VERIFICATION_PASSWORD_WRONG_FORMAT2'][$languageId]}').fadeIn();
+				return false;
+			} else if(code.val() == '') {
+				code.focus();
+				tip.html('{$_LANG['VERIFICATION_ENTER_CODE'][$languageId]}').fadeIn();
+				return false;
+			} else if(code.val().length != 5) {
+				code.focus();
+				tip.html('{php echo $id = $languageId == 1 ? '验证码长度只能为5位' : 'Verification code length only for five';}').fadeIn();
+				return false;
+			}
+
+			tip.fadeOut();
+		});
+
+		$('.j-login-switch').click(function(){
+			$(".register-box").css("display","none");
+			$(".login-box").css("display","block");
+		});
+
+		$('.j-register-switch').click(function(){
+			$(".login-box").css("display","none");
+			$(".register-box").css("display","block");
+		});
+
+		$('.mask-click').click(function(){
+			$(".register-box").css("display","none");
+			$(".login-box").css("display","none");
+			$(".mask").css("display","none");
+			$(".mask-click").css("display","none");
+		});
+		$('.mask').click(function(){
+			$(".register-box").css("display","none");
+			$(".login-box").css("display","none");
+			$(".mask").css("display","none");
+			$(".mask-click").css("display","none");
+		});
+	});
+
+$(function(){
+	//倒计时 1
+	var timedate= new Date("2017/02/15"); 
+	var now = new Date(); 
+	var date = timedate.getTime() - now.getTime(); 
+	var time = Math.floor(date / (1000 * 60 * 60 * 24)); 
+	var myH=Math.floor(date / (1000*60*60)) % 24;
+	var flag = false;
+	if(time>= 0){
+		var time = time;
+	}else if(time<=-1 && time>=-3){
+		var time =  "进行中";
+		flag = true;
+	}else{
+		var time =  "已结束";
+		flag = true;
+	}
+	if(flag){//2016/2/15
+		$('.shijian').css({'font-size':'23px','line-height':'30px'});
+		$('.day').css({'margin-top':'0px'});
+		$('.show_date .title').hide();
+		$('.day_txt').hide();
+	}
+    $(".shijian").html(time);
+
+	
+	//倒计时 2
+	var timedate= new Date("2016/07/01"); 
+	var now = new Date(); 
+	var date = timedate.getTime() - now.getTime(); 
+	var time = Math.floor(date / (1000 * 60 * 60 * 24)); 
+	var myH=Math.floor(date / (1000*60*60)) % 24;
+	var flag = false;
+	if(time>= 0){
+		var time = time;
+	}else if(time<=-1 && time>=-2){
+		var time =  "进行中";
+		flag = true;
+	}else{
+		var time =  "已结束";
+		flag = true;
+	}
+	if(flag){//2016/2/15
+		$('.show_date_r .shijian').css({'font-size':'23px','line-height':'30px'});
+		$('.show_date_r .day').css({'margin-top':'0px'});
+		$('.show_date_r .title').hide();
+		$('.show_date_r .day_txt').hide();
+	}
+    $(".show_date_r .shijian").html(time);
+
+});
+//检测IE浏览器版本是否过低
+//var b_name = navigator.appName;
+//var b_version = navigator.appVersion;
+//var version = b_version.split(";");
+//var trim_version = version[1].replace(/[ ]/g, "");
+//if (b_name == "Microsoft Internet Explorer") {
+	///*如果是IE6或者IE7,MSIE8.0*/
+	//if (trim_version == "MSIE8.0" || trim_version == "MSIE7.0" || trim_version == "MSIE6.0") {
+		//alert("您IE浏览器版本过低，请使用IE9以上的浏览器更佳");
+	//}
+//}
+</script>
+
+<!-- banner -->
+
+<!-- banner end -->

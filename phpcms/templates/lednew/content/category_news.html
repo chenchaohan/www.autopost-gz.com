@@ -1,0 +1,88 @@
+{template "content","header"}
+<link rel="stylesheet" href="{LED_PATH}css/swiper.min.css" />
+<link href="{LED_PATH}css/news.css?v=1" rel="stylesheet" />
+
+<!--main-->
+<div class="container comm">
+
+            <div class="lt">
+                {template "content","left_box"}
+            </div>
+            <div class="rt">
+                <div class="newsIndexWarp">
+                    <div class="newIndex">
+                        
+                        {php $cate_arr=array(31,32);//分类}
+                        {loop $cate_arr $catid}
+                        <div class="regin-head new">
+                            <a class="more" href="{$CATEGORYS[$catid]['url']}">更多 &gt;</a>
+                            <h4><a>{$CATEGORYS[$catid]['catname']}</a></h4>
+                        </div>
+                        <div class="newhead EnlargeImg">
+                            <div class="lfd">
+
+                                <div class="swiper-container">
+                                    <ul class="swiper-wrapper" id="swiper-wrapper">
+                                   {pc:content action="position" posid="10" catid="$catid" order="listorder DESC" num="3"}
+                                        {loop $data $r}
+                                        <li class="swiper-slide" 
+                                        ><a href="{$r[url]}"><img src="{$r[thumb]}" border="0" alt=""><span>{str_cut($r['title'], 50)}</span></a></li>
+                                        {/loop}
+                                    {/pc}
+                                    </ul>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+
+                            <div class="rth">
+                                {pc:content action="lists" catid="$catid" limit='0,1' order="listorder DESC,id DESC"}
+                                    {loop $data $r}
+                                <h3>
+                                    <a class="title" href="{$r['url']}">{str_cut($r['title'], 60)}</a></h3>
+                                <p class="subh" id="ucNewsHot1">
+                                    <a href="{$r['url']}">{str_cut($r['description'], 200)} &nbsp;详情&gt;</a>
+                                </p>
+                                    {/loop}
+                                {/pc}
+                                <ul class="newhl">
+                                    {pc:content action="lists" catid="$catid" limit='1,4' order="listorder DESC,id DESC"}
+                                    {loop $data $r}
+                                            <li><span class="nli_time">{date('Y-m-d',$r[inputtime])}</span><a href="{$r['url']}" class="overflowtxt" title="">{str_cut($r['title'], 60)}</a></li>
+                                         {/loop}
+                                    {/pc} 
+                                        
+                                </ul>
+
+                            </div>
+                        </div>
+                        {/loop}
+                    
+                </div>
+
+    </div>
+
+
+
+
+</div>
+<script type="text/javascript" src="{LED_PATH}js/swiper.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () { 
+        var mySwiper = new Swiper('.swiper-container',{
+           nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+            loop:true,
+            autoplay:5000,
+            paginationClickable: true,
+            centeredSlides: true,
+            onSlideChangeStart: function(){
+                //回调函数
+            }
+        });
+    });
+
+</script>
+{template "content","footer"}

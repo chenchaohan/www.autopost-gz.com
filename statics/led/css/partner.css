@@ -1,0 +1,110 @@
+.right_content {
+    background-color: white;
+    float: left;
+    padding: 10px 0 40px;
+    position: relative;
+}
+.w_prd_rc_box {
+    margin: auto;
+    position: relative;
+    width: 750px;
+}
+.w_prd_rc_title {
+    border-bottom: 2px solid #00a6db;
+    height: 28px;
+    overflow: hidden;
+}
+.w_prd_rc_title > span {
+    color: #005cc4;
+    float: left;
+    font-size: 18px;
+    line-height: 28px;
+}
+.w_prd_rc_title_map {
+    float: right;
+    overflow: hidden;
+    position: relative;
+}
+.w_prd_rc_title_map > li {
+    float: left;
+    position: relative;
+}
+.w_prd_rc_title_map > li > img {
+    vertical-align: middle;
+}
+.w_prd_rc_title_map > li > span, .w_prd_rc_title_map > li > a {
+    color: #505050;
+    font-size: 13px;
+    line-height: 28px;
+}
+.w_prd_rc_title_map > li > span {
+    margin: 0 5px;
+}
+.w_prd_rc_title_map > li > a:hover {
+    text-decoration: underline;
+}
+.w_prd_league_city1 {
+    border-bottom: 1px dashed #c8c8c8;
+    padding: 22px 0 2px;
+}
+.w_prd_league_city1 > ul > li {
+    margin-bottom: 20px;
+}
+.w_prd_league_city1 > ul > li div.logo {
+    border: 1px solid #dedede;
+    height: 82px;
+    position: relative;
+}
+.w_prd_league_city2 {
+    padding-top: 10px;
+    min-height: 400px;
+}
+.w_prd_league_city2 > ul > li {
+    margin-top: 20px;
+}
+.w_prd_league_city2 > ul > li div.logo {
+    border: 1px solid #dedede;
+       height: 60px;width: 140px;
+    position: relative;
+    text-align: center;
+}
+.w_prd_league_city > ul {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.w_prd_league_city > ul > li {
+    float: left;
+    margin-left: 5%;
+    width: 20%;
+}
+.w_prd_league_city > ul > li:nth-child(3n+1) {
+    clear: both;
+    margin-left: 0;
+}
+.w_prd_league_city > ul > li div.logo > img {
+    height: 100%;
+    width:100%;
+    position: relative;
+    
+}
+.w_prd_league_city > ul > li p {
+    color: #646464;
+    font-size: 12px;
+}
+.w_prd_league_city > ul > li p.title {
+    color: #323232;
+    display: block;
+    font-size: 14px;
+    margin-top: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+}
+.w_prd_league_city > ul > li p:not(.title) {
+    display: block;
+    max-height: 51px;
+    overflow: hidden;
+}

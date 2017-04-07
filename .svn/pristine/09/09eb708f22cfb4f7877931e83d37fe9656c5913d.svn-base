@@ -1,0 +1,30 @@
+{pc:get sql="SELECT parentid FROM phpcms_category WHERE catid = $catid LIMIT 0, 1--" return="data"}
+	{php $getCategory = $data[0];}
+{/pc}
+{if !in_array($getCategory['parentid'],array(15,35,16,73))}
+	{php $_catid = $getCategory['parentid'];}
+{else}
+	{php $_catid = $catid;}
+{/if}
+
+
+<dl class="">
+<dt><i></i><a href="{$CATEGORYS[$catid]['url']}" style="color:#fff;">{$CATEGORYS[$_catid]['catname']}</a></dt>
+
+{pc:get sql="SELECT catid, catname, url,description FROM phpcms_category WHERE parentid = $_catid and ismenu=1 ORDER BY listorder ASC" return="data"}
+	{if $data}
+		{loop $data $value}
+
+		<dd {if $value['catid'] == $catid}class="now"{/if} >
+		<i></i>
+		{if preg_match('/^(http:\/\/)/', $value['description'])}
+			<a href="<?=  preg_match('/^(http:\/\/)|(^\/)/', $value['description'])?APP_PATH.$value['description']:$value['url'];?>">
+		{else}
+			<a href="<?=  $value['description']?APP_PATH.$value['description']:$value['url'];?>">
+		{/if}
+			{$value['catname']}
+		</a></dd>
+		{/loop}
+	{/if}
+{/pc}
+</dl>

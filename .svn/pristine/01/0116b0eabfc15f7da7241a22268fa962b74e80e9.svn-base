@@ -1,0 +1,79 @@
+{if $_GET['step']==2}
+	{template "content","list_repast2"}
+	<?php exit;?>
+
+{else}
+
+
+{template "content","header"}
+
+<link href="{LED_PATH}css/repast.css?v=1" rel="stylesheet" />
+<!--头部结束-->
+
+
+<!-- 内容 -->
+<div class="container comm p2th">
+{template "content","position_local"}
+
+
+	<div class="lt">
+	   {template "content","left_service_box"}
+	</div>
+    
+    <div class="right right_content rightArea">
+                <h1 class="CaterSearch">餐饮查询及预订</h1>
+               <ul class="ul_list">
+                    <li id="ul_list_li1">	
+                            <h2>分类:</h2>
+                           
+							<div class="adiv">
+								{loop filters('style_cate',$modelid) $r}
+	                            	{$r[menu]}|
+	                            {/loop}
+                            </div>
+							<div class="clearboth"></div>
+                    </li>
+                    <li id="ul_list_li2">	
+                            <h2>商区:</h2>
+                           <div class="adiv">
+								{loop filters('area',$modelid) $r}
+	                            	{$r[menu]}|
+	                            {/loop}
+                            </div>
+                    </li>
+            <div class="clearboth"></div>
+                </ul>                
+                <div class="finddiv" style="width:500px;">
+                	
+                </div>
+                <div style="clearboth"></div>
+                <div class="photo_list">
+                	<h2 class="restaurantsale">指定餐厅<br>消费优惠：</h2>
+					<ul class="photo_ul" id="photoul">
+						{php $sql = structure_filters_sql($modelid)}
+					 	{php $urlrule = makeurlrule()}
+					 	{pc:content action="lists" catid="$catid" where="$sql" num="10" order="id DESC" page="$page" moreinfo="13" urlrule="$urlrule"}
+					 	 	{loop $data $r}
+						    <li>
+	                        	<a href="{$r[url]}"><img src="{thumb($r[thumb],156,97)}" width="156px" height="97px"></a>
+	                            <p class="hotelname">{$r[title]}</p>
+	                            <span class="sale"></span>
+	                           <a href="{$r[url]}"> <span class="select">精选</span></a>
+	                        </li>
+	                        {/loop}
+                     </ul>
+ 					
+ 					{/pc}
+
+                    <a class="more" id="more" href="{$CATEGORYS[$catid][url]}&step=2">更多信息...</a>
+                </div>
+        </div>
+    </div>
+  
+    <div class="clear"></div>
+</div>
+<!-- 内容END -->
+<!--底部开始-->
+{template "content","footer"}
+
+{/if}

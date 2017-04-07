@@ -1,0 +1,61 @@
+{template "content","header"}
+
+<link href="{LED_PATH}css/repast.css?v=1" rel="stylesheet" />
+<style type="text/css">
+.p2th .right .ul_list li .adiv{width:auto;}
+</style>
+<!--头部结束-->
+<!-- 内容 -->
+<div class="container comm p2th">
+{template "content","position_local"}
+    <div class="right ">
+                <h1 class="CaterSearch">{$CATEGORYS[$catid]['catname']}</h1>
+               <ul class="ul_list">
+                     <li id="ul_list_li1">  
+                            <h2>游玩天数:</h2>
+                           
+                            <div class="adiv">
+                                {loop filters('day_num',$modelid) $r}
+                                    {$r[menu]}|
+                                {/loop}
+                            </div>
+                            <div class="clearboth"></div>
+                    </li>
+                    <li id="ul_list_li2">   
+                            <h2>交通:</h2>
+                           <div class="adiv">
+                                {loop filters('traffic',$modelid) $r}
+                                    {$r[menu]}|
+                                {/loop}
+                            </div>
+                            <div class="clearboth"></div>
+                    </li>
+                    <div class="clearboth"></div>
+                    <li id="ul_list_li3">   
+                            <h2>热门景区:</h2>
+                           <div class="adiv">
+                                {loop filters('scenic',$modelid) $r}
+                                    {$r[menu]}|
+                                {/loop}
+                            </div>
+                             <div class="clearboth"></div>
+                    </li>
+            <div class="clearboth"></div>
+                </ul>                
+                <div class="finddiv" style="width:500px;">
+                    
+                </div>
+                <div style="clearboth"></div>
+                <div class="detail">
+                    <h2>{$title}</h2>
+                    {$content}
+
+                </div>
+        </div>
+    </div>
+  
+    <div class="clear"></div>
+</div>
+<!-- 内容END -->
+<!--底部开始-->
+{template "content","footer"}

@@ -1,0 +1,176 @@
+{template "content","header"}
+
+<link rel="stylesheet" href="{LED_PATH}css/swiper.min.css" />
+<div class="w_fs_index_banner">
+       <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="swiper-wrapper">
+		  
+												<div class="swiper-slide">
+					<a href="#">
+					{if $languageId==1}
+						<img src="{LED_PATH}images/banner_banner0.jpg"  style="width: 100%;" class="spread" alt="">
+					{else}
+						<img src="{LED_PATH}images/banner_en.jpg" style="width: 100%;" class="spread" alt="">
+					{/if}
+					</a>
+				</div>
+												
+        <!-- Add Pagination 
+        <div class="swiper-pagination"></div>-->
+    </div>
+
+</div>
+<script type="text/javascript" src="{LED_PATH}js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+    <script>
+
+    //var newSlideSize = function slideSize(){
+        //var w = Math.ceil($(".swiper-container").width()/3/*--调整高度---*/);
+        //$(".swiper-container,.swiper-wrapper,.swiper-slide").height(w);
+    //};
+    //newSlideSize();
+    //$(window).resize(function(){
+        //newSlideSize();
+    //});
+$(document).ready(function () { 
+	var mySwiper = new Swiper('.swiper-container',{
+      
+        loop:false,
+        autoplay:5000,
+        paginationClickable: true,
+		centeredSlides: true,
+        onSlideChangeStart: function(){
+            //回调函数
+        }
+    });
+});
+</script>
+	
+<!-- 主体内容 -->
+<div class="container">
+	<!-- banner -->
+	<div class="banner">
+		<div class="banner_l fl">
+		{if $languageId==1}
+			<div class="fl">
+				<p>欢迎参加</p>
+				<p>第25届广州国际汽车用品、</p>
+				<p>零配件及售后服务展览会</p>
+				<p>距离开幕还有</p>
+
+			</div>
+		{else}
+			<div class="fl en">
+				<p>Welcome to The</p>
+				<p>25th Guangzhou International Exhibition</p>
+				<p>of Automotive Products,</p>
+				<p>Auto Parts & Post-market Services</p>
+				<p>Countdown</p>
+			</div>
+		{/if}
+			<div class="fl date">
+				<span>107</span>{$_LANG['DAYS'][$languageId]}
+			</div>
+		</div>
+		<div class="banner_r fr">
+			<?php 
+				$aid = $languageId==1 ? 18 : 81;
+				$bid = $languageId==1 ? 25 : 96;
+			?>
+			<p><a href="{APP_PATH}index.php?m=consult&c=index&a=exhibition_form&catid={$aid}&lang={$languageId}"><img src="{LED_PATH}images/index_cz_btn_{$languageName}.jpg" /></a></p>
+			<p><a href="{APP_PATH}index.php?m=consult&c=index&a=visitorregister&catid={$bid}&lang={$languageId}"><img src="{LED_PATH}images/index_dj_btn_{$languageName}.jpg" /></a></p>
+			<p><a href="#"><img src="{LED_PATH}images/index_login_btn_{$languageName}.jpg" /></a></p>
+
+
+		</div>
+	</div>
+	<!-- banner end -->
+
+	<!-- 分类 -->
+	<div class="news_box">
+	<?php //分类频道
+			if($languageId==1){
+				$cat_arr = array(1=>31,2=>32);
+			}else{
+				$cat_arr = array(1=>101,2=>102);
+			}
+			
+		?>
+		{php $k=1;}
+		{loop $cat_arr $key $catid}
+			<div class="news_index_box {if $k%2!=0}fl {else} fr {/if}">
+				<div class="block_index_title"><a href="{$CATEGORYS[$catid][url]}">{$_LANG['MORE'][$languageId]}>></a><span>{$CATEGORYS[$catid][catname]}</span></div>
+				<div class="cate_desc">
+					<ul>
+					{php $k2=1;}
+						{pc:content action="lists" catid="$catid" order="listorder DESC,id DESC" num="6"}
+							{loop $data $n $r}
+								<li><a href="{$r['url']}" target="_blank">{str_cut($r['title'], 80)}</a><span>{date('Y/m/d', $r[inputtime])}</span></li>
+						{php $k2++;}
+							{/loop}
+						{/pc}
+					</ul>
+				</div>
+			</div>
+			{php $k++;$k2++;}
+		{/loop}
+
+		<div style="clear: both;"></div>
+	</div>
+	<!-- 分类 end -->
+	<?php $go_url = $languageId==1? 'index.php?m=consult&c=index&a=exhibition_form&catid=18&lang=1': 'index.php?m=consult&c=index&a=exhibition_form&catid=81&lang=2';?>
+	<div onclick="window.location.href='{APP_PATH}{$go_url}'">
+		<img src="{LED_PATH}images/middle_banner_cn.jpg" style=" width: 100%;">
+
+		</div>
+	
+{php $id = $languageId == 1 ? 43 : 76;}
+	<div class="block_index_box block_consult_box" >
+		<div class="block_index_title"><a href="{$CATEGORYS[$id][url]}">{$_LANG['MORE'][$languageId]}>></a><span>{$CATEGORYS[$id][catname]}</span></div>
+		<div id="mar1">
+			<ul>
+				{pc:get sql="SELECT * FROM phpcms_partner WHERE catid in ($id) ORDER BY listorder DESC,id DESC LIMIT 0, 20-- "return="data"}
+	                {loop $data $n $r} 
+					<li>
+						<a href="{$r['url']}" target="_blank"><img src="{$r['thumb']}" /></a>
+					</li>
+	                {/loop}
+	            {/pc}
+			</ul>
+		</div>
+	</div>
+{php $id = $languageId == 1 ? 44 : 77;}
+	<div class="block_index_box block_consult_box partner_box">
+		<div class="block_index_title"><a href="{$CATEGORYS[$id][url]}">{$_LANG['MORE'][$languageId]}>></a><span>{$CATEGORYS[$id][catname]}</span></div>
+		<div id="mar2">
+			<ul>
+				{pc:get sql="SELECT * FROM phpcms_partner WHERE catid in ($id) ORDER BY listorder DESC,id DESC LIMIT 0, 20-- "return="data"}
+	                {loop $data $n $r} 
+					<li>
+						<a href="{$r['url']}" target="_blank"><img src="{$r['thumb']}" /></a>
+					</li>
+	                {/loop}
+	            {/pc}
+			</ul>
+		</div>
+	</div>
+
+
+</div>
+<!-- 主体内容 end -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#mar1").marquee({
+        direction:"right",
+        speed:30
+    });
+	$("#mar2").marquee({
+        direction:"right",
+        speed:30
+    });
+});
+    
+</script>
+
+{template "content","footer"}

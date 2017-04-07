@@ -1,0 +1,21 @@
+{template "content","header"}
+<!-- 内容 -->
+<div class="content">
+	<div class="common_left">
+		<div class="title {if $languageId == 1}s_blue_bg{else}l_blue_bg{/if}">{$CATEGORYS[$catid]['catname']}</div>
+		<div class="cont_box p43_cont content_pic">
+			<!--<p>{$title}</p>-->
+			<dd>
+			{$content}
+			</dd>
+		</div>
+	</div>
+
+	{template "content","right_side"}
+
+    <div class="clear"></div>
+</div>
+<!-- 内容END -->
+<script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$_GET['id']}&modelid={$modelid}"></script>
+<!--底部开始-->
+{template "content","footer"}

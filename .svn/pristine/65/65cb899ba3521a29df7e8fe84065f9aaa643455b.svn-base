@@ -1,0 +1,47 @@
+{template "content","header"}
+
+<link href="{LED_PATH}css/repast.css?v=1" rel="stylesheet" />
+<!--头部结束-->
+<!-- 内容 -->
+<div class="container comm p2th">
+{template "content","position_local"}
+    <div class="right ">
+                <h1 class="CaterSearch">餐饮查询</h1>
+               <ul class="ul_list">
+                    <li id="ul_list_li1">   
+                            <h2>分类:</h2>
+                           
+                            <div class="adiv" style="width: 800px;">
+                                {loop filters('style_cate',$modelid,'','&setp=2') $r}
+                                    {$r[menu]}|
+                                {/loop}
+                            </div>
+                            <div class="clearboth"></div>
+                    </li>
+                    <li id="ul_list_li2">   
+                            <h2>商区:</h2>
+                           <div class="adiv" style="width: 800px;">
+                                {loop filters('area',$modelid,'','&setp=2') $r}
+                                    {$r[menu]}|
+                                {/loop}
+                            </div>
+                    </li>
+            <div class="clearboth"></div>
+                </ul>                
+                <div class="finddiv" style="width:500px;">
+                    
+                </div>
+                <div style="clearboth"></div>
+                <div class="detail">
+                    <h2>{$title}</h2>
+                    {$content}
+
+                </div>
+        </div>
+    </div>
+  
+    <div class="clear"></div>
+</div>
+<!-- 内容END -->
+<!--底部开始-->
+{template "content","footer"}

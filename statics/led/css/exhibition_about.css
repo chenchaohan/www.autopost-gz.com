@@ -1,0 +1,213 @@
+
+.about .rt .about-md h4 {
+  font-size: 16px;
+  text-indent: 2em;
+  font-weight: normal;
+  border-bottom: dashed 1px #bfbfbf;
+  padding-bottom: 40px;
+}
+.about .rt .about-md h4 .more {
+  color: #d70c19;
+}
+.about .rt .about-md li {
+  width: 284px;
+  float: left;
+  margin-right: 48px;
+  height: 300px;
+}
+.about .rt .about-md li:nth-child(3n) {
+  margin-right: 0;
+}
+.about .rt .about-md li img {
+  width: 100%;
+}
+.about .rt .about-md li p.title {
+  /*color: #000;*/
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.about-nav {
+  width: 52px;
+  height: 211px;
+  /*background: url(../img/nav_01.jpg) no-repeat 0 0;*/
+  position: fixed;
+  right: 5%;
+  top: 50%;
+}
+.about-nav li {
+  width: 52px;
+  height: 52px;
+}
+.about-nav li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+.icon_kehu {
+    width: 69px;
+    height: 69px;
+    margin-left: 34px;
+    display: block;
+    background: url(../images/index/kehu.png) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.icon_kefu {
+    margin-top: 10px;
+    margin-left: 69px;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    width: 30px;
+    font-size: 15px;
+    font-weight: 800;
+    font-style: normal;
+}
+/* é¦–é¡µå³ä¾§å¯¼èˆªæ  */
+.btn {
+    display: block;
+    width: 33px;
+    padding-left: 17px;
+    margin-right: 10px;
+    border: 2px solid red;
+}
+.a1 {
+    margin-left: -9px;
+}
+.a2 {
+    margin-left: 6px;
+}
+.a3 {
+    margin-left: 40px;
+}
+.nav li.hiddenWords span {
+    display: none;
+}
+.nav li.hiddenWords {
+    padding: 0 0 20px 0;
+}
+.nav li.dbc.hiddenWords {
+    background-position: center 10px;
+}
+.subMenuWarp.smallMenu {
+    width: 16.50%;
+}
+.stick {
+    position: fixed;
+    top: 0;
+}
+.menu {
+    margin-left: 29px;
+}
+.cphoen_erweima {
+    font-size: 14px;
+    font-weight: 700;
+    color: #d70d19;
+}
+.nav_a_1 {
+    font-size: 14px;
+    position: fixed;
+    background: #666;
+    right: -54px;
+    top: 203px;
+    z-index: 10000;
+    display: block;
+}
+#rightArrow {
+    width: 54px;
+    height: 54px;
+    line-height: 49px;
+    position: fixed;
+    top: 114px;
+    right: 0px !important;
+    background-color: #6d6d6d;
+    color: #fff;
+    font-style: normal;
+    text-align: center;
+    cursor: pointer;
+}
+    #rightArrow span {
+        font-style: normal;
+    }
+/*#rightArrow:hover {
+                background-color: #d70d19;
+            }*/
+.rightArrow_1 {
+    width: 54px !important;
+    height: 54px !important;
+    display: inline-block !important;
+    position: fixed;
+    top: 156px;
+    right: 0px !important;
+    overflow: hidden !important;
+    background-repeat: no-repeat;
+    background-image: url(images/i.png) !important;
+    background-size: cover;
+    border-radius: 30px !important;
+}
+.hd_img {
+    /*margin-top: -58px;*/
+}
+.nav li.dbd {
+    padding: 0;
+    width: 54px;
+    height: 54px;
+}
+    .nav li.dbd:hover {
+        background-color: #6d6d6d;
+    }
+.dba a {
+    display: block;
+    border-bottom: 2px dotted #ccc;
+    margin: 0;
+    /*padding-bottom: 10px;*/
+}
+#rightArrow .p2 {
+    background-image: url("/cn/images/whitei.png");
+}
+    #rightArrow .p2:hover {
+        background-image: url("/cn/images/whitei2.png");
+    }
+.text-justify-list span:first-child {
+    margin-bottom: 5px;
+}
+.hx {
+    margin-top: 5px;
+}
+.hd_img {
+    margin-top: -52px;
+}
+
+.about .rt .about-md li{
+                    height:333px;
+                    }
+        .about{position: relative;}
+        .about .position_local{position: absolute;left:-4px;top:-24px;}
+        .about .position_local a{padding:0 4px;}
+        .cd_gjh{ line-height: 20px;}
+        /*.btn_download{*/
+            /*box-shadow: -1px 1px 1px black;*/
+            /*background-color: red;*/
+            /*margin-top: 20px;*/
+            /*color: white;*/
+            /*display: inline-block;*/
+            /*padding: 10px 20px;*/
+            /*width: 50px;*/
+            /*text-align: center;*/
+        /*}*/
+
+
+
+
+
+
+
+
+
+
+
+

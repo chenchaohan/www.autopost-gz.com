@@ -1,0 +1,275 @@
+{template "content","header"}
+<!--头部结束-->
+<!--内容开始-->
+<script type="text/javascript">
+ $(document).ready(function(){
+ $("form").submit(function(){
+  //获得表单值
+ var unit=$("#unit").val();
+  var address=$("#address").val();
+  var standard=$("#standard").val();
+  var raw=$("#raw").val();
+  var zhuying1=$("#zhuying1").val();
+  var zhuying2=$("#zhuying2").val();
+  var zhuying3=$("#zhuying3").val();
+  var zhuying4=$("#zhuying4").val();
+  var introduction=$("#introduction").val();
+  var leader=$("#leader").val();
+  var Position=$("#Position").val();
+  var phone=$("#phone").val();
+  var postbox=$("#postbox").val();
+  //如果表单为空，提示用户
+  if(unit==""){
+   //显示错误提示信息
+   alert('Company Name cannot be empty!');
+   $("#unit").focus();
+   return false;
+  }
+  if(address==""){
+    alert('Company Address cannot be empty!');
+   $("#address").focus();
+   return false;
+  }
+  if(standard==""){
+    alert('Standard booth cannot be empty!');
+   $("#standard").focus();
+   return false;
+  }
+  if(raw==""){
+    alert('Raw space cannot be empty!');
+   $("#raw").focus();
+   return false;
+  }
+  if($("#zhanqu1 input").is(":checked")==false){
+    alert("Exhibition Area Intention cannot be empty!");
+    $("#zhanqu1 input").focus();
+  return false;
+}
+  //if($("#zhanqu2 input").is(":checked")==false){
+    //alert("Exhibition Area Intention cannot be empty!");
+    //$("#zhanqu2 input").focus();
+  //return false;
+//}
+  if(zhuying1=="" && zhuying2=="" && zhuying3=="" && zhuying4==""){
+    alert('Main products cannot be empty!');
+   $("#zhuying1").focus();
+   return false;
+  }
+  if(introduction==""){
+    alert('Company profile cannot be empty!');
+   $("#introduction").focus();
+   return false;
+  }  
+
+  if(leader==""){
+    alert('Contact Person cannot be empty!');
+   $("#leader").focus();
+   return false;
+  }
+  if(Position==""){
+    alert('Position cannot be empty!');
+   $("#Position").focus();
+   return false;
+  }
+  if(phone==""){
+    alert('Mobile Number cannot be empty!');
+   $("#phone").focus();
+   return false;
+  }
+  if(!(/^[1][358][0-9]{9}$/.test(phone))){ 
+        alert("Please enter the correct 11 phone number!"); 
+         $("#phone").focus();
+        return false; 
+    } 
+  if(postbox==""){
+    alert('QQ/Email cannot be empty!');
+   $("#postbox").focus();
+   return false;
+  }
+  return true;
+  });
+});
+</script>
+
+<div class="content">
+<div class="canzhan common_left">
+<div class="title {if $languageId == 1}s_blue_bg{else}l_blue_bg{/if}">{$CATEGORYS[$catid]['catname']}</div>
+	<form class="cont_box my_form" action="{siteurl(1)}/index.php?m=form&c=index&a=post_canzhan" method="post" enctype="multipart/form-data">
+      <div class="form_tit">Company Information</div>
+      <table class="table1" width="650" border="0">
+		<tr>
+			<td class="cz_title">Company Name<span>*</span></td>
+			<td style="width:500px;"><input class="ty_txt" type="text" id="unit" name="name"  /></td>
+		</tr>
+		<tr>
+			<td class="cz_title">Company Address<span>*</span></td>
+			<td><input class="ty_txt" type="text" id="address" name="address" /></td>
+		</tr>
+		<tr>
+			<td class="cz_title">Company Website</td>
+			<td><input class="ty_txt" type="text" id="weburl" name="weburl"/></td>
+		</tr>
+		<tr><td colspan=2>&nbsp;</td></tr>
+		<tr>
+			<td class="cz_title" >Booth Fee</td>
+			<td>Standard booth(3m x 3m)，RMB <span style="color:red">10,000</span> /each</td>
+		</tr>
+		<tr>
+			<td class="cz_title"></td>
+			<td>Raw space(36㎡min)，RMB <span style="color:red">1,000</span> /㎡</td>
+		</tr>
+		<tr><td colspan=2>&nbsp;</td></tr>
+		<tr>
+			<td class="cz_title">Booth ordering<span>*</span></td>
+			<td>Standard booth<input  class="ty_txt lit_ipt" type="text"  name="standard" id="standard"/>/each</td>
+		</tr>
+		<tr>
+			<td class="cz_title"></td>
+			<td>Raw space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input  class="ty_txt lit_ipt" type="text"  name="raw" id="raw"/>/㎡</td>
+		</tr>
+		<tr><td colspan=2>&nbsp;</td></tr>
+		<tr>
+			<td valign="top" class="cz_title">Exhibition Area Intention<span>*</span></td>
+			<td class="zhanqu checkbox_c">
+				<!--<p>1、Intelligent Signs Exhibition, Guangzhou</p> -->
+				<div id="zhanqu1">
+					<p>
+						<input type="checkbox" name="checkbox[]" value="LED Display & Application" />
+						<span>LED Display & Application</span>
+						  <input type="checkbox" name="checkbox[]" value="DLP Splicing, LCD/PDP Splicing, Projection Display, Digital Signage & Tablet Display" />
+						<span>DLP Splicing, LCD/PDP Splicing, Projection Display, Digital Signage & Tablet Display</span>
+
+						<input type="checkbox" name="checkbox[]" value="LED Lighting & New Technology"  />
+						<span >LED Lighting & New Technology</span>
+						<input type="checkbox" name="checkbox[]"  value="Signs, Display & Related Materials" />
+						<span>Signs, Display & Related Materials</span>
+						<input type="checkbox" name="checkbox[]"  value="Engraving Machinery" />
+						<span>Engraving Machinery</span>
+						<input type="checkbox" name="checkbox[]"  value="Engraving, Bending Machines & Light Boxes" />
+						<span>Engraving, Bending Machines & Light Boxes</span>
+
+						<input type="checkbox" name="checkbox[]"  value="Advertising Signs" />
+						<span style="margin-right: 47px;">Advertising Signs</span>
+						<input type="checkbox" name="checkbox[]"  value="Inkjet Printing" />
+						<span>Inkjet Printing</span>
+					</p>
+					<!--<p>
+						<input type="checkbox" name="checkbox[]"  value="Ads materials consumable"/>
+						<span>Ads materials consumable</span>
+						<input type="checkbox" name="checkbox[]"  value="Software, gifts and books"/>
+						<span>Software, gifts and books</span>
+					</p>-->
+				</div>
+				<p style="height:5px;">&nbsp;</p>
+				<!--<p>2、Intelligent LED Exhibition, Guangzhou</p>
+				<div id="zhanqu2">
+					<p>
+						<input type="checkbox" name="checkbox2[]"  value="LED screen and sign"  />
+						<span>LED screen and sign</span>
+						<input type="checkbox" name="checkbox2[]"  value="Ads and engineering illumination" />
+						<span>Ads and engineering illumination</span>
+						<br/>
+						<input type="checkbox" name="checkbox2[]"  value="Commercial lighting"  />
+						<span style="margin-right: 17px;">Commercial lighting</span>
+						<input type="checkbox" name="checkbox2[]"   value="Lights and accessories" />
+						<span>Lights and accessories</span>
+					</p>
+					<p>
+						<input type="checkbox" name="checkbox2[]"   value="Special illumination"/>
+						<span style="margin-right: 21px;">Special illumination</span>
+						<input type="checkbox" name="checkbox2[]"   value="LED equipment, patents and energy saving" />
+						<span>LED equipment, patents and energy saving</span>
+						<br/>
+						<input type="checkbox" name="checkbox2[]"   value="LED new technology and standard" />
+						<span>LED new technology and standard</span>
+					</p>
+					<p style="height:10px;">&nbsp;</p>
+				</div>
+				-->
+			</td>
+		</tr>
+		<tr>
+		<td class="cz_title" valign="top">Main products<span>*</span></td>
+		<td>
+			<p>1、<input class="ty_txt zhuying_ipt" name="zhuying[]" id="zhuying1" type="text" /></p>
+			<p>2、<input class="ty_txt zhuying_ipt" name="zhuying[]" id="zhuying2" type="text" /></p>
+			<p>3、<input class="ty_txt zhuying_ipt" name="zhuying[]" id="zhuying3" type="text" /></p>
+			<p>4、<input class="ty_txt zhuying_ipt" name="zhuying[]" id="zhuying4" type="text" /></p>
+		</td>
+		</tr>
+		<tr>
+		<td style="padding-top:18px;" valign="top" class="cz_title">Company profile<span>*</span></td>
+		<td style="padding-top:18px;">
+		<textarea name="introduction" id="introduction" style="width:435px;height:45px;border:1px solid #e7e7e7;"></textarea>
+		<p style="color:red;margin-top:10px;font-weight: bold;font-size:12px;">
+		This company undertakes not to exhibit any fake products, and the exhibited contents comply with the contents hereof; otherwise, this company will accept the punishment imposed by organizing committee and bear all consequences.</p>
+		<p style="height:20px;">&nbsp;</p>
+		</td>
+		</tr>
+	</table>
+
+	<div class="form_tit">Contact Information</div>
+	<table class="table2" width="600" border="0">
+			<tr>
+			<td class="cz_title" > Contact Person<span>*</span></td>
+			<td><input class="ty_txt lit_ipt" type="text" id="leader" name="leader"  /></td>
+		</tr>
+		<tr>
+			<td class="cz_title" > Gender<span>*</span></td>
+			<td>
+				<input name="sex" type="radio" value="Male" checked=checked />Male&nbsp;&nbsp;&nbsp;&nbsp;
+        		<input name="sex" type="radio" value="Female" />Female
+			</td>
+		</tr>
+		<tr>
+			<td class="cz_title" > Position<span>*</span></td>
+			<td><input class="ty_txt lit_ipt" type="text"  id="Position" name="Position"  /></td>
+		</tr>
+		<tr>
+			<td class="cz_title" > Mobile Number<span>*</span></td>
+			<td><input class="ty_txt lit_ipt" type="text" id="phone" name="phone"   /></td>
+		</tr>
+		<tr>
+			<td class="cz_title" >QQ/Email<span>*</span></td>
+			<td><input class="ty_txt lit_ipt" type="text"  id="postbox" name="email"  /></td>
+		</tr>
+	</table>
+	<tr><td colspan=2>&nbsp;</td></tr>
+	<div class="form_tit">Business License Proof</div>
+	<table class="table2" width="600" border="0">
+		<tr><td colspan=2>&nbsp;</td></tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+				<input class="yingye" type="file" name="upfile" value="浏览" />
+				<p class="liulan">Uploading pictures (less than 2M)</p>
+			</td>
+		</tr>
+		<tr><td colspan=2>&nbsp;</td></tr>
+		<tr>
+			<td class="cz_title" > Verified Code<span>*</span></td>
+			<td>
+				<input type="text" name="code" id="code" class="code ty_txt lit_ipt">
+				<img id='code_img' style="width: 80px;height:22px;border: 1px solid #ccc;" onclick='this.src=this.src+"&"+Math.random()' src='{siteurl(1)}/api.php?op=checkcode&code_len=5&font_size=19&width=120&height=40&font_color=&background='></p>
+			</td>
+		</tr>
+		<tr><td colspan=2>&nbsp;</td></tr>
+
+	</table>
+	<div style="text-align:center;margin-top:15px;">
+		<input type="hidden" name="lan" value="2">
+		<input class="tijiao"  name="dosubmit" type="image" src="{LED_PATH}images/tijiao_btn_en.jpg" value="提交" />
+	</div>
+</form>
+</div>
+<!-- 右侧栏 -->
+{template "content","right_side"}
+<!-- 右侧栏end -->
+</div>
+
+
+<div style="clear:both;"></div>
+<!--底部-->
+
+{template "content","footer"}

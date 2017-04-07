@@ -1,0 +1,445 @@
+
+/** 重置超链接元素 **/
+a {
+  text-decoration: none;
+  color:#372617;
+}
+
+a:hover {
+  text-decoration:underline;
+  color:#ce131c;
+}
+
+/** 重置图片元素 **/
+img {
+  border:none;
+}
+
+/** 重置表格元素 **/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/** 清楚浮动 **/
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* html .clearfix {
+  zoom: 1;
+} /* IE6 */
+
+*:first-child+html .clearfix {
+  zoom: 1;
+} /* IE7 */
+
+textarea, input {
+  resize:none
+}
+
+a, textarea, input, button {
+  outline:none
+}
+
+.clear {
+  clear:both;
+  font-size:0;
+  line-height:0;
+  height:0;
+  overflow:hidden;
+}
+
+.coz {
+  clear:both;
+  overflow:hidden;
+  zoom:1
+}
+
+/*** font ***/
+.word_break {
+  white-space:normal;
+  word-wrap:break-word;
+  word-break:break-all;
+}
+
+.f14 {
+  font-size:14px;
+}
+
+.fb {
+  font-weight:bold;
+}
+
+.db {
+  display:block
+}
+
+.dn {
+  display:none
+}
+
+.di {
+  display:inline
+}
+
+.tc {
+  text-align:center;
+}
+
+.vam {
+  vertical-align:middle;
+}
+
+.font_wryh {
+  font-family:'微软雅黑', '黑体', '宋体';
+}
+em {
+  font-style:normal;
+}
+
+/**contenter主题内容部分*/
+ /*p1th部分***图片播放区域*/
+.p1th ul {
+  position:absolute;
+  left:0;
+  top:0;
+  height:204px;
+  overflow: hidden;
+}
+
+.p1th li {
+  float:left;
+  height:204px;
+}
+
+.p1th li img{
+  width: 990px;
+  height:204px;
+}
+
+.p1th .link {
+  position:absolute;
+  right:20px;
+  bottom:10px;
+}
+
+.p1th .link a {
+  background: url(p1th/a_acitve.jpg) no-repeat;
+  float:left;
+  height:20px;
+  width:22px;
+  line-height:20px;
+  margin-right:3px;
+  text-align:center;
+  color:#565656;
+  display:block;
+}
+
+.p1th .link a:hover {
+  display:block;
+  text-decoration:underline;
+}
+
+.p1th .link a.active {
+  background: url(p1th/a_bg.jpg) no-repeat;
+  color:#fff;
+  text-decoration:none;
+}
+
+.p1th .link a.active:hover {
+  text-decoration:none;
+}
+
+/*p2th部分***馆外优惠搜索板块*/
+
+.p2th .p_nav {
+  padding-bottom:16px;
+  font:12px "宋体";
+  color:#000;
+}
+
+
+/*左边部分*/
+
+
+.p2th .left div.resdiv {
+  width:288px;
+  height:212px;
+  border:4px solid #ce1219;
+  text-align:left;
+  color:#ce1219;
+}
+
+.p2th .left div.resdiv h2 {
+  padding-left:16px;
+  height:46px;
+  font:22px/46px "微软雅黑";
+}
+
+.p2th .left div.resdiv h3 {
+  
+  width:289px;
+  margin-bottom:10px;
+  margin-left:-4px;
+  height:36px;
+  font-weight:normal;
+  font-size:16px;
+  line-height:36px;
+  border:1px solid #dcdcdc;
+  background:#FFF;
+  cursor:pointer;
+}
+
+.p2th .left div.resdiv h3 a {
+  display:block;
+  color:#ce1219;
+  padding-left:16px;
+  text-decoration: none;
+}
+.p2th .left div.resdiv h3 a:hover{
+    background:#ce1219;
+    width:273px;
+    border:none;
+    color:#fff;
+    }
+
+.p2th .left div.resdiv h3.active {
+  background:#ce1219;
+  width:291px;
+  border:none;
+}
+
+.p2th .left div.resdiv h3.active a {
+  color:#fff;
+  text-decoration: none;
+}
+
+.p2th .left div.img {
+  padding: 36px 60px 60px 60px;
+  width:178px;
+}
+
+/*右边部分*/
+
+.p2th .right .CaterSearch {
+  padding-left:40px;
+  padding-top:8px;
+  border-top:4px solid #ce1219;
+      display: inline-block;
+  font:18px "微软雅黑";
+  color:#ce1219;
+  background:url(h1_bg22.jpg) no-repeat 8px 2px;
+}
+
+.p2th .right .ul_list {
+  padding: 0 2px;
+  padding-top:24px;
+  padding-bottom:46px;
+  overflow:hidden;
+
+}
+
+.p2th .right .ul_list li {
+/*  width:700px;*/
+  margin-bottom: 10px;
+}
+
+.p2th .right .ul_list li h2 {
+  width:112px;
+  font:14px "宋体";
+  padding-right:10px;
+  text-align:right;
+  color:#000;
+  font-weight:bold;
+  float:left;
+}
+
+.p2th .right .ul_list li a {
+  font:12px/20px "宋体";
+  display:inline-block;
+}
+
+.p2th .right .ul_list li a.active {
+  color: #fff;
+  background: #ce1219;
+  padding: 0 2px;
+  text-decoration:none;
+}
+
+.p2th .right .ul_list li div.posdiv {
+  float:left;
+  height:18px;
+  line-height:18px;
+  margin-right:10px;
+}
+
+.p2th .right .ul_list li .adiv {
+  float:left;
+  width: 578px;
+}
+
+.clearboth {
+  clear: both;
+}
+
+.p2th .right .ul_list li .wrapdiv {
+  float:left;
+}
+
+.p2th .right .ul_list li .priceForm {
+  width:160px;
+  float:left;
+  margin-left:14px;
+}
+
+.p2th .right .priceForm input.text {
+  width:34px;
+  height:18px;
+  border:1px solid #cecece;
+}
+
+.p2th .right .priceForm input.btn {
+  background:url(btn_bg.jpg) no-repeat;
+  width:49px;
+  height:21px;
+}
+
+.p2th .right li.fin {
+  clear:both;
+  margin-top:18px;
+}
+
+/*右边图片列表部分*/
+.p2th .right .photo_list {
+}
+
+.right .photo_list .restaurantsale {
+  width:90px;
+  padding-left:38px;
+  font:14px/20px "宋体";
+  font-weight:bold;
+  float:left;
+}
+
+.right .photo_list .photo_ul {
+  float:left;
+  width:524px;
+}
+
+.right .photo_ul li {
+  width:160px;
+  height:160px;
+  padding-bottom:20px;
+  margin-right:10px;
+  text-align:center;
+  font:12px/20px "宋体";
+  float:left;
+}
+
+.right .photo_ul li img {
+  border:1px solid #ebebeb;
+}
+
+.right .photo_ul li .hotelname {
+  margin-top:4px;
+}
+
+.right .photo_ul li span {
+  display:block;
+}
+
+.right .photo_ul li span.sale {
+  color:#ce1219;
+  font-weight:bold;
+}
+
+.right .photo_ul li span.select {
+  width:36px;
+  height:17px;
+  font:12px/17px "宋体";
+  margin:4px auto 0;
+  color:#fff;
+  background: #ce1219;
+  cursor:pointer;
+  border-radius: 5px;
+}
+
+.right .photo_list a.more {
+  font:12px/14px "宋体";
+  color:#000;
+  float:right;
+  margin-right:40px;
+  margin-top:4px;
+  cursor:pointer;
+}
+
+.right .photo_list a.more:hover {
+  text-decoration:underline;
+  color:#ce131c;
+}
+
+/*翻页按钮部分*/
+.p3th .tab {
+  clear:both;
+  width:340;
+  height:24px;
+  float:right;
+  padding-top:28px;
+  padding-right:30px;
+}
+
+.p3th .tab a {
+  padding:5px 6px;
+  margin-right:5px;
+  border: 1px solid #dcdcdc;
+}
+
+.p3th .tab a.active {
+  background:#ce1219;
+  color:#fff;
+}
+
+.p3th .tab .prev {
+  padding-left:14px;
+  background:url(p3th/icon2.jpg) no-repeat 0 3px;
+}
+
+.p3th .tab .next {
+  padding-right:14px;
+  background:url(p3th/icon3.jpg) no-repeat right;
+}
+
+
+.ul_list em {
+  background: #ce1219;
+  padding: 2px 3px;
+  color: #FFF;
+  margin-right: 2px;
+}
+.detail h2 {
+  font-size: 24px;
+  line-height: 60px;
+  color: #ce1219;
+  padding-left: 28px;
+}
+
+
+/*右菜单*/
+
+
+
+.rightArea{width: 730px !important;padding: 0 10px;overflow: hidden;}
+.flAdv{text-align: center;}
+.tkServe{width: 230px;border: 3px solid #cd1219;margin-bottom: 16px;padding-bottom: 35px;}
+.tkServe h2{font-size: 22px;margin: 12px 16px;line-height: 1; color: #c71008;}
+.s_list{display: block;width: 230px;border-width: 1px;border-style: solid;line-height: 35px;margin-left: -4px;margin-top: 10px;cursor: pointer;}
+.s_list{border-color:  #dddddd;color: #d10810;background: #fff;position:relative;*zoom: 1;overflow: hidden;}
+.s_list:hover,
+.tkServe .on{border-color:  #cd1219;color: #fff;font-weight: bold;background: #cd1219;text-decoration: none;}
+.s_list span{padding-left: 20px;}

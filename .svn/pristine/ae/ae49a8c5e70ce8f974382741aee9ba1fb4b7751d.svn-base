@@ -1,0 +1,85 @@
+{template "content","header"}
+
+<link href="{LED_PATH}css/news.css?v=1" rel="stylesheet" />
+<div id="" class="">
+	<style type="text/css">
+	table {
+		border:1px solid #d3d3d3;
+		background:#fefefe;
+		  width: 100%;
+	}
+	th, td {padding:18px 28px 18px; text-align:center; }
+
+	td {border-top:1px solid #e0e0e0; border-right:1px solid #e0e0e0;}
+	
+	tr.odd-row td {background:#f6f6f6;}
+	
+	td.first, th.first {text-align:left}
+	
+	td.last {border-right:none;}
+
+	tr.odd-row td {
+		background: -moz-linear-gradient(100% 25% 90deg, #f6f6f6, #f1f1f1);
+		background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f1f1f1), to(#f6f6f6));
+	}
+	
+	th {
+		background: -moz-linear-gradient(100% 20% 90deg, #e8eaeb, #ededed);
+		background: -webkit-gradient(linear, 0% 0%, 0% 20%, from(#ededed), to(#e8eaeb));
+		  border-right: 1px solid #e0e0e0;
+	}
+	</style>
+</div>
+<!--main-->
+<div class="container comm about ">
+<div class="detail ">
+            <!--lo_linksstart-->
+            {template "content","position_local"}
+
+            <div style="clear: both;"></div>
+            <!--lo_linksend-->
+            <div class="lt">
+               {template "content","left_box"}
+            </div>
+            <div class="rt">
+                <table>
+				{if $languageId==1}
+					<tr>
+						<th>活动名称</th>
+						<th>活动规模</th>
+						<th>活动时间</th>
+						<th>活动地点</th>
+						<th>主办方</th>
+					</tr>
+				{else}
+					<tr>
+						<th>Activity Name</th>
+						<th>Active Scale</th>
+						<th>Active Time</th>
+						<th>Address</th>
+						<th>Sponsor</th>
+					</tr>
+				{/if}
+				{pc:content action="lists" catid="$catid" order="listorder DESC,id DESC" page="$page" moreinfo="1" num="10"}
+					
+                    {loop $data $n $r}
+					<tr>
+						<td>{$r['title']}</td>
+						<td>{$r['scale']}</td>
+						<td>{$r['atv_date']}</td>
+						<td>{$r['atv_address']}</td>
+						<td>{$r['sponsor']}</td>
+					</tr>
+					{/loop}
+                {/pc}
+                
+                </table>
+	
+            </div>
+			<div id="pages" class="text-c">{$pages}</div>
+        <div style="clear: both;"></div>
+    </div>
+</div>
+
+
+{template "content","footer"}

@@ -1,0 +1,67 @@
+{template "content","header"}
+<!--加载文本编辑器-->
+<script charset="utf-8" src="{LED_PATH}editor/kindeditor.js"></script>
+<script charset="utf-8" src="{LED_PATH}editor/lang/zh_CN.js"></script>
+<script>
+ KindEditor.ready(function(K) {
+                window.editor = K.create('#editor_id');
+        });
+</script>
+<script type="text/javascript">
+ $(document).ready(function(){
+ $("#form").submit(function(){
+  //获得表单值
+  var code=$("#code").val();
+  //如果表单为空，提示用户
+
+  if(code==""){
+   //显示错误提示信息
+   alert('请输入验证码');
+   $("#code").focus();
+   return false;
+  }
+  return true;
+ });
+});
+
+  </script>
+<!--头部结束-->
+<!-- 内容 -->
+{if $languageId == 1}
+<div class="content">
+{else}
+<div class="content" style=" text-align:center;">
+{/if}
+{if $languageId == 1}
+	<div class="info2" style="width:703px; margin-right:118px;float: left;margin-top: 35px;">
+	<p>采购意向发布</p>
+	{else}
+	<div class="info2" style="width:703px;margin-top: 35px; margin:0 auto;">
+	<p>Purchase Intention Billboard</p>
+	{/if}
+	
+    	
+        <dd>
+            <form action="index.php?m=form&c=index&a=post_caigoum" method="post" id="form">
+            <textarea id="editor_id" name="content" ></textarea>
+
+<input type="text" style="width: 100px;height: 40px;" id="code" name="code" />
+<img id='code_img' onclick='this.src=this.src+"&"+Math.random()' src='api.php?op=checkcode&code_len=5&font_size=19&width=120&height=40&font_color=&background='>
+            {if $languageId == 1}
+			<input type="submit" value="提交" class="Msubmit"  />
+			{else}
+			<input type="submit" value="submit" class="Msubmit"  />
+			{/if}
+            </form>
+	   </dd>
+    </div>
+<!--高峰论坛 -->
+{if $languageId == 1}
+{template "subsection","gaofengluntan"}
+{else}
+{/if}
+    <div class="clear"></div>
+</div>
+<!-- 内容END -->
+<!--底部开始-->
+{template "content","footer"}

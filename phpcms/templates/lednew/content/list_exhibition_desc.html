@@ -1,0 +1,41 @@
+{template "content","header"}
+
+<link href="{LED_PATH}css/exhibition_about.css?v=1" rel="stylesheet" />
+<!--头部结束-->
+<!-- 内容 -->
+<div class="container comm">
+	<div class="lt">
+	   {template "content","left_box"}
+	</div>
+    <div class="about right_content" >
+         <div class="rt">
+                <div class="about-md">
+                    <h4>
+                        <span>
+                            中国进出口商品交易会，又称广交会，创办于1957年春季，每年春秋两季在广州举办，是中国目前历史最长、层次最高、规模最大、商品种类最全、到会采购商最多且分布国别地区最广、成交效果最好、信誉最佳的综合性国际贸易盛会。
+                        </span>
+                    </h4>
+
+                    <ul>
+					{pc:get sql="SELECT * FROM phpcms_news WHERE catid=$catid ORDER BY listorder DESC LIMIT 10--" return="data"}
+						{loop $data $r}
+						 <li>
+							<a href="{$r[url]}">
+								<img src="{$r[thumb]}" style="height:199px;">
+								<p class="title">{$r[title]}</p>
+								<p class="cd">{str_cut($r['description'], 100)}</p>
+							</a>
+						</li>
+						{/loop}
+					{/pc}
+                       
+                    </ul>
+                </div>
+            </div>
+    </div>
+  
+    <div class="clear"></div>
+</div>
+<!-- 内容END -->
+<!--底部开始-->
+{template "content","footer"}

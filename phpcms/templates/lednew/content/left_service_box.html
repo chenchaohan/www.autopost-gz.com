@@ -1,0 +1,23 @@
+{pc:get sql="SELECT parentid FROM phpcms_category WHERE catid = $catid LIMIT 0, 1--" return="data"}
+	{php $getCategory = $data[0];}
+{/pc}
+{if $getCategory['parentid'] != 15}
+	{php $_catid = $getCategory['parentid'];}
+{else}
+	{php $_catid = $catid;}
+{/if}
+
+
+
+
+<div class="left" style="position:relative; "><!--左边导航部分-->
+        	
+	<div class="leftArea fl">
+	<div class="tkServe">
+		<h2>{$CATEGORYS[$catid]['catname']}</h2>
+		<?php $aid = $languageId ==1 ?39:107;?>
+		<a class="s_place s_list" href="{$CATEGORYS[$aid]['url']}"><span>{$CATEGORYS[$aid]['catname']}</span></a>
+		<a class="s_place s_list on" href="{$CATEGORYS[$catid]['url']}"><span>{$CATEGORYS[$catid]['catname']}</span></a>
+	</div>
+    </div>
+</div>  

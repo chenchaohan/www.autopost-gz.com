@@ -1,0 +1,1 @@
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><div class="position_local"><?php echo catpos($catid);?> </div>

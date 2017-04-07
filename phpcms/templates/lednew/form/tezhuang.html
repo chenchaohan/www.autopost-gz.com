@@ -1,0 +1,230 @@
+{template "content","header"}
+<!--头部结束-->
+<!--内容开始-->
+<script type="text/javascript">
+
+ $(document).ready(function(){
+ $("form").submit(function(){
+  //获得表单值
+ var unit=$("#unit").val();
+  var address=$("#address").val();
+  var order=$("#order").val();
+  var zhuying1=$("#zhuying1").val();
+  var zhuying2=$("#zhuying2").val();
+  var zhuying3=$("#zhuying3").val();
+  var zhuying4=$("#zhuying4").val();
+  var introduction=$("#introduction").val();
+  var leader=$("#leader").val();
+  var duty=$("#duty").val();
+  var phone=$("#phone").val();
+  var postbox=$("#postbox").val();
+  //如果表单为空，提示用户
+  if(unit==""){
+   //显示错误提示信息
+   alert('请输入单位名称。');
+   $("#unit").focus();
+   return false;
+  }
+  if(address==""){
+    alert('请输入单位地址。');
+   $("#address").focus();
+   return false;
+  }
+//  if(order==""){
+//    alert('请输入光地面积。');
+//   $("#order").focus();
+//   return false;
+//  }
+  if($("#zhanqu1 input").is(":checked")==false){
+    alert("你还没有选展区选择。");
+    $("#zhanqu1 input").focus();
+  return false;
+}
+  if($("#zhanqu2 input").is(":checked")==false){
+    alert("你还没有选展区选择。");
+    $("#zhanqu2 input").focus();
+  return false;
+}
+  if(zhuying1=="" && zhuying2=="" && zhuying3=="" && zhuying4==""){
+    alert('请输入主营产品。');
+   $("#zhuying1").focus();
+   return false;
+  }
+  if(introduction==""){
+    alert('请输入企业简介。');
+   $("#introduction").focus();
+   return false;
+  }  
+
+  if(leader==""){
+    alert('请输入负责人。');
+   $("#leader").focus();
+   return false;
+  }
+  if(duty==""){
+    alert('请输入职务。');
+   $("#duty").focus();
+   return false;
+  }
+  if(phone==""){
+    alert('请输入移动电话。');
+   $("#phone").focus();
+   return false;
+  }
+  if(!(/^[1][358][0-9]{9}$/.test(phone))){ 
+        alert("请输入正确的11位手机号码"); 
+         $("#phone").focus();
+        return false; 
+    } 
+  if(postbox==""){
+    alert('请输入QQ/邮箱。');
+   $("#postbox").focus();
+   return false;
+  }
+  if(!(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(postbox))){ 
+        alert("请输入正确的邮箱地址"); 
+         $("#postbox").focus();
+        return false; 
+    } 
+  return true;
+ });
+
+});
+</script>
+
+<div class="content">
+<div class="canzhan common_left">
+	<div class="title {if $languageId == 1}s_blue_bg{else}l_blue_bg{/if}">{$CATEGORYS[$catid]['catname']}</div>
+	<form class="cont_box my_form" action="{siteurl(1)}/index.php?m=form&c=index&a=post_tezhuang" method="post" enctype="multipart/form-data">
+      <div class="form_tit">企业信息</div>
+      <table class="table1" width="650" border="0">
+		<tr>
+			<td class="cz_title">单位名称<span>*</span></td>
+			<td style="width:500px;"><input class="ty_txt" type="text" id="unit" name="name"  /></td>
+		</tr>
+		<tr>
+			<td class="cz_title">单位地址<span>*</span></td>
+			<td><input class="ty_txt" type="text" id="address" name="address" /></td>
+		</tr>
+		<tr>
+			<td class="cz_title">光地面积</td>
+			<td><input  class="ty_txt lit_ipt" type="text"  name="order" id="order"/>/㎡</td>
+		</tr>
+		<tr><td colspan=2>&nbsp;</td></tr>
+		<tr>
+			<td valign="top" class="cz_title">展区选择<span>*</span></td>
+			<td class="zhanqu checkbox_c">
+				<p>1、广州国际智能广告标识展览会</p> 
+				<div id="zhanqu1">
+					<p>
+						<input type="checkbox" name="checkbox[]" value="广告制作设备" />
+						<span>广告制作设备</span>
+						  <input type="checkbox" name="checkbox[]" value="智能标识及标牌" />
+						<span>智能标识及标牌</span>
+						<input type="checkbox" name="checkbox[]" value="展览展示器材"  />
+						<span>展览展示器材</span>
+						<input type="checkbox" name="checkbox[]"  value="新媒体" />
+						<span>新媒体</span>
+					</p>
+					<p>
+						<input type="checkbox" name="checkbox[]"  value="广告物料耗材"/>
+						<span>广告物料耗材</span>
+						<input type="checkbox" name="checkbox[]"  value="软件礼品书籍"/>
+						<span>软件礼品书籍</span>
+					</p>
+				</div>
+				<p style="height:5px;">&nbsp;</p>
+				<p>2、广州国际智能LED展览会</p>
+				<div id="zhanqu2">
+					<p>
+						<input type="checkbox" name="checkbox2[]"  value="LED屏幕及导视"  />
+						<span>LED屏幕及导视</span>
+						<input type="checkbox" name="checkbox2[]"  value="广告及工程照明" />
+						<span>广告及工程照明</span>
+						<input type="checkbox" name="checkbox2[]"  value="商业照明"  />
+						<span>商业照明</span>
+						<input type="checkbox" name="checkbox2[]"   value="灯饰及零配件" />
+						<span>灯饰及零配件</span>
+					</p>
+					<p>
+						<input type="checkbox" name="checkbox2[]"   value="特种照明"/>
+						<span>特种照明</span>
+						<input type="checkbox" name="checkbox2[]"   value="LED设备、专利、节能服务" />
+						<span>LED设备、专利、节能服务</span>
+						<input type="checkbox" name="checkbox2[]"   value="LED新技术、标准" />
+						<span>LED新技术、标准</span>
+					</p>
+					<p style="height:10px;">&nbsp;</p>
+				</div>
+			</td>
+		</tr>
+		<tr>
+		<td class="cz_title" valign="top">主营产品<span>*</span></td>
+		<td>
+			<p>1、<input class="ty_txt zhuying_ipt" name="zhuying[]" id="zhuying1" type="text" /></p>
+			<p>2、<input class="ty_txt zhuying_ipt" name="zhuying[]" id="zhuying2" type="text" /></p>
+			<p>3、<input class="ty_txt zhuying_ipt" name="zhuying[]" id="zhuying3" type="text" /></p>
+			<p>4、<input class="ty_txt zhuying_ipt" name="zhuying[]" id="zhuying4" type="text" /></p>
+		</td>
+		</tr>
+		<tr>
+		<td style="padding-top:18px;" valign="top" class="cz_title">企业简介<span>*</span></td>
+		<td style="padding-top:18px;">
+		<textarea name="introduction" id="introduction" style="width:435px;height:45px;border:1px solid #e7e7e7;"></textarea>
+		<p style="color:red;margin-top:10px;font-weight: bold;font-size:12px;">
+		本单位郑重承诺决不展出假冒伪劣产品，实际展示内容与本报名表申请内容一致。若不符，本单位愿意接受组委会处理并承担一切后果。</p>
+		<p style="height:20px;">&nbsp;</p>
+		</td>
+		</tr>
+	</table>
+
+	<div class="form_tit">联络信息</div>
+	<table class="table2" width="600" border="0">
+			<tr>
+			<td class="cz_title" > 负责人<span>*</span></td>
+			<td><input class="ty_txt lit_ipt" type="text" id="leader" name="leader"  /></td>
+		</tr>
+		<tr>
+			<td class="cz_title" > 性别<span>*</span></td>
+			<td>
+				<input name="sex" type="radio" value="男" checked=checked />男&nbsp;&nbsp;&nbsp;&nbsp;
+				<input name="sex" type="radio" value="女" />女
+			</td>
+		</tr>
+		<tr>
+			<td class="cz_title" > 职务<span>*</span></td>
+			<td><input class="ty_txt lit_ipt" type="text"  id="duty" name="duty"  /></td>
+		</tr>
+		<tr>
+			<td class="cz_title" > 移动电话<span>*</span></td>
+			<td><input class="ty_txt lit_ipt" type="text" id="phone" name="phone"   /></td>
+		</tr>
+		<tr>
+			<td class="cz_title" >QQ/邮箱<span>*</span></td>
+			<td><input class="ty_txt lit_ipt" type="text"  id="postbox" name="email"  /></td>
+		</tr>
+		<tr>
+			<td class="cz_title" > 验证码<span>*</span></td>
+			<td>
+				<input type="text" name="code" id="code" class="code ty_txt lit_ipt">
+				<img id='code_img' style="width: 80px;height:22px;border: 1px solid #ccc;" onclick='this.src=this.src+"&"+Math.random()' src='{siteurl(1)}/api.php?op=checkcode&code_len=5&font_size=19&width=120&height=40&font_color=&background='></p>
+			</td>
+		</tr>
+	</table>
+	<tr><td colspan=2>&nbsp;</td></tr>
+	
+	<div style="text-align:center;margin-top:15px;">
+		<input type="hidden" name="lan" value="1">
+		<input class="tijiao"  name="dosubmit" type="image" src="{LED_PATH}images/tijiao_btn.jpg" value="提交" />
+	</div>
+</form>
+</div>
+<!-- 右侧栏 -->
+{template "content","right_side"}
+<!-- 右侧栏end -->
+</div>
+
+<div style="clear:both;"></div>
+<!--底部-->
+
+{template "content","footer"}

@@ -1,0 +1,34 @@
+    <div class="C-a gaofengforum" style="background:#FFF;height:525px;margin-top:26px;" >
+        <div class="C-a-title list-title" style="width:90%">
+            {php $id = $languageId == 1 ? 35 : 109;}
+            <a href="index.php?m=content&c=index&a=lists&catid={$id}" style="margin-left:7px" target="_blank">More</a>
+            {pc:get sql="SELECT * FROM phpcms_category WHERE catid in ($id) ORDER BY listorder ASC LIMIT 0, 1--"return="data"}
+            {loop $data $n $r}
+            <span>{$r['catname']}</span>
+            {/loop}
+            {/pc}
+            <div class="mid">
+            <p></p>
+            </div>
+            
+        </div>
+        {pc:content action="lists" catid="$id" order="id DESC" thumb="" moreinfo="" num="5" }
+        {loop $data $n $r}
+        <ul style="width:347px">
+            <a href="{$r['url']}">
+            <span>{$r['title']}</span>
+			{if $r['description']}
+            <li class="description"> {$r['description']}</li>
+			{/if}
+            </a>
+        </ul>
+        {/loop}
+        {/pc}
+        {pc:content action="lists" catid="$id" order="id DESC" thumb="" moreinfo="" num="1" }
+        {loop $data $n $r}
+        {if $r['thumb']!=""}
+        <!--<a><img src="{$r['thumb']}"   style=" padding-bottom:25px; margin:0;"  /></a>-->
+        {/if}
+        {/loop}
+        {/pc}
+    </div>

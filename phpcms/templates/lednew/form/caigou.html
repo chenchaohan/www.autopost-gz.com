@@ -1,0 +1,373 @@
+{template "content","header"}
+<script src="{JS_PATH}jquery.validate.js"></script>
+<script src="{JS_PATH}validate-ex.js"></script>
+
+<!--内容开始-->
+<div class="content">
+	<div class="caigou_left">
+		<div class="dj_title">
+			<img src="{LED_PATH}/images/dj_title.png" />
+		</div>
+		
+		<div class="my_form">
+		{if 0}
+			<p>观众预登记通道已关闭，请届时前往展会现场登记。  更多详情请致电：020-89268257/8287</p>
+		{else}
+			<form  class="" action="{siteurl(1)}/index.php?m=form&c=index&a=caigou_cn" id="myform" method="post">
+
+			<table class="table1" width="650" border="0">
+				<tr>
+					<td valign="top" class="cz_title">感兴趣展会<span>*</span></td>
+				</tr>
+				<tr>
+					<td class="interest_zh checkbox_c">
+						<div id="interest_zh">
+							<p>
+								<input type="checkbox" name="interest_zh" value="1" />
+								<span>春季展(2017.2.15-18)</span>
+								  <input type="checkbox" name="interest_zh" value="2" />
+								<span>秋季展(2016.7.22-24)</span>
+								<input type="checkbox" name="interest_zh" value="3"  />
+								<span>春季展及秋季展</span>
+							</p>
+							
+						</div>
+					</td>
+				</tr>
+
+			</table>
+			<p style="height:20px;">&nbsp;</p>
+				<div class="form_tit">个人信息</div>
+				  <table class="table3" border="0">
+					  <tr>
+						<td class="cz_title">称呼<span>*</span></td>
+						<td>
+							<select id="title" name="title" class="ty_txt">
+							<option value="" >--请选择称呼--</option>
+							<option value="先生">先生</option>
+							<option value="女士">女士</option>
+						</select>
+						</td>
+					  </tr>
+					  <tr>
+						<td class="cz_title">姓名<span>*</span></td>
+						<td><input class="ty_txt" type="text" id="name" name="name" /></td>
+					  </tr>
+					  <tr>
+						<td class="cz_title">联系电话</td>
+						<td><input class="ty_txt" type="text" id="tel" name="tel" /></td>
+					  </tr>
+					  <tr>
+						<td class="cz_title">手机<span>*</span></td>
+						<td><input class="ty_txt" type="text" id="mobile" name="mobile" /></td>
+					  </tr>
+					  <tr>
+						<td class="cz_title">联系邮箱<span>*</span></td>
+						<td>
+						<input class="ty_txt" type="text" id="email" name="email" />
+							<p style="color:red;margin-top:10px;font-weight: bold;font-size:12px;">
+							请务必填写您经常使用的有效邮箱，以便我们发送“预先登记回执”给您</p>
+						</td>
+					  </tr>
+				</table>
+				<div class="form_tit" style="margin-top:37px;">企业信息</div>
+				  <table class="table3" border="0">
+					  <tr>
+						<td class="cz_title">公司名称<span>*</span></td>
+						<td><input class="ty_txt" type="text" id="company_name" name="company_name"  /></td>
+					  </tr>
+					  <tr>
+						<td class="cz_title">职务</td>
+						<td><input class="ty_txt" type="text" id="position" name="position" /></td>
+					  </tr>
+					  <tr>
+						<td class="cz_title">公司地址<span>*</span></td>
+						<td>{menu_linkage(1,'area')}<input class="ty_txt" type="text" id="address" name="address" /></td>
+					  </tr>
+					  <tr>
+						<td class="cz_title" colspan=2>感兴趣的产品类别<span>*</span></td>
+					  </tr>
+					   <tr>
+						<td class="checkbox_c" colspan=2 style="line-height: 25px">
+						<table>
+						<tr>
+							<td><input type="checkbox" name="interest_product[]" value="LED显示技术应用" />
+								<span>LED显示技术应用 (*仅限春季展)</span></td>
+							<td><input type="checkbox" name="interest_product[]" value="DLP拼接、LCD/PDP拼接"/>
+								<span style=";">DLP拼接、LCD/PDP拼接 (*仅限春季展)</span></td>
+							<td><input type="checkbox" name="interest_product[]"  value="投影显示"/>
+								<span>投影显示 (*仅限春季展)</span></td>
+							
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="interest_product[]" value="平板显示" />
+								<span style=";">平板显示 (*仅限春季展)</span></td>
+							<td><input type="checkbox" name="interest_product[]" value="LED照明"/>
+								<span style=";">LED照明 (*仅限春季展)</span></td>
+							<td><input type="checkbox" name="interest_product[]"  value="LED创新技术"/>
+								<span>LED创新技术 (*仅限春季展)</span></td>
+						</tr>
+						<tr>
+							<td colspan=6><input type="checkbox" name="interest_product[]"  value="数字标牌"/>
+								<span>数字标牌</span>
+							<input type="checkbox" name="interest_product[]" value="广告标识" />
+								<span style=";">广告标识</span>
+							<input type="checkbox" name="interest_product[]" value="广告展示器材及材料"/>
+								<span style=";">广告展示器材及材料</span>
+							<input type="checkbox" name="interest_product[]"  value="雕刻设备"/>
+								<span>雕刻设备</span>
+							<input type="checkbox" name="interest_product[]"  value="弯字设备"/>
+								<span>弯字设备</span>
+							<input type="checkbox" name="interest_product[]"  value="灯箱"/>
+								<span>灯箱</span>
+							<input type="checkbox" name="interest_product[]"  value="喷印设备"/>
+								<span>喷印设备</span>
+
+								</td>
+						</tr>
+					
+						</table>
+						</td>
+					  </tr>
+
+					  <tr>
+						<td class="cz_title" colspan=2 style="vertical-align:middle;">您是如何得知ISLE？<span>*</span></td>
+					  </tr>
+					  <tr>
+						<td class="checkbox_c" colspan=2 style="line-height: 25px">
+								<input type="radio" name="learn_isle" value="广告宣传" />
+								<span>广告宣传</span>
+								<input type="radio" name="learn_isle" value="网络搜索"/>
+								<span>网络搜索</span>
+								<input type="radio" name="learn_isle"  value="邮件邀请"/>
+								<span>邮件邀请</span>
+								<input type="radio" name="learn_isle"  value="商函邀请"/>
+								<span>商函邀请</span>
+								<input type="radio" name="learn_isle" value="展会推荐" />
+								<span>展会推荐</span>
+								<input type="radio" name="learn_isle" value="其他采购商推荐"/>
+								<span>其他采购商推荐</span>
+								<br />
+								<input type="radio" name="learn_isle"  value="1"/>
+								<span>参展商推荐<input type="text" name="czs_rec" value="" style="border:0;border-bottom:1px solid #000;width: 120px;"/>(请务必正确填写邀请您参观的企业名称)</span>
+								<input type="radio" name="learn_isle" value="2" />
+								<span>其他<input type="text" name="other" value="" style="border:0;border-bottom:1px solid #000;width: 120px"/></span>
+						</td>
+					  </tr>
+					  <tr style="display:block;margin-top:30px;margin-bottom:10px;">
+						<td class="cz_title" colspan=2>您对ISLE的建议</td>
+					  </tr>
+					  <tr>
+						<td class="cz_title" colspan=2>
+							<textarea id="suggestion" name="suggestion" rows="" cols="" style="width:500px;height:45px;border:1px solid #e7e7e7;"></textarea>
+						</td>
+					  </tr>
+
+					  <tr style="display:block;margin:10px 0;">
+						<td class="checkbox_c" colspan=2>
+							<input type="checkbox" name="is_friend" id="is_friend" value="1" id="toggle"/>&nbsp;<span style="color:#000;font-size:16px;font-weight: bold;margin-right:0;">帮同事或者朋友申请参会</span></td>
+					  </tr>
+					  <tr class="link_info">
+						<td class="cz_title">称呼<span>*</span></td>
+						<td><input class="ty_txt" type="text"id="f_title" name="f_title"  /></td>
+					  </tr>
+					  <tr class="link_info">
+						<td class="cz_title">姓名<span>*</span></td>
+						<td><input class="ty_txt" type="text" id="f_name" name="f_name" /></td>
+					  </tr>
+					  <tr class="link_info">
+						<td class="cz_title">联系电话</td>
+						<td><input class="ty_txt" type="text" id="f_tel" name="f_tel" /></td>
+					  </tr>
+					  <tr class="link_info">
+						<td class="cz_title">手机<span>*</span></td>
+						<td><input class="ty_txt" type="text" id="f_mobile" name="f_mobile" /></td>
+					  </tr>
+					  <tr class="link_info">
+						<td class="cz_title">联系邮箱<span>*</span></td>
+						<td>
+						<input class="ty_txt" type="text" id="f_email" name="f_email" />
+							<p style="color:red;margin-top:10px;font-weight: bold;font-size:12px;">
+							请务必填写邀请人经常使用的有效邮箱，以便我们发送“预先登记回执”给受邀人</p>
+						</td>
+					  </tr>
+					  <tr class="link_info">
+						<td class="cz_title">公司名称<span>*</span></td>
+						<td><input class="ty_txt" type="text" id="f_company_name" name="f_company_name"  /></td>
+					  </tr>
+					  <tr class="link_info">
+						<td class="cz_title">职务</td>
+						<td><input class="ty_txt" type="text" id="f_position" name="f_position" /></td>
+					  </tr>
+
+					  <tr style="height:30px;color:red;margin-top:10px;font-weight: bold;font-size:12px;">
+						<td class="" colspan=2>每个邮箱、手机号码仅针对一位观众预登记，请您确保受邀人的信息准确有效，以便对方能及时收到预登记成功通知。</td>
+					  </tr>
+					  <tr>
+						<td class="" colspan=2 style="font-size:14px;color:#000;">如需帮助，请联系：<b>020-89268292</b></td>
+					  </tr>
+				</table>
+			<div style="text-align:center;margin-top:15px;">
+				<input type="hidden" name="lan" value="1">
+				<input class="tijiao"  name="dosubmit" type="image" src="{LED_PATH}images/tijiao_btn.jpg" value="提交" />
+			</div>
+			</form>
+			{/if}
+		</div>
+	</div>
+	
+	{template "content","right_side"}
+
+</div>
+
+<div style="clear:both;"></div>
+<!--底部-->
+<script>
+$(function(){
+	//感兴趣展会
+$("#interest_zh :checkbox").click(function(){
+	if($(this).attr("checked")!=undefined){
+		$(this).siblings().attr("checked",false);
+		$(this).attr("checked",true);
+	}
+});
+
+	$("#is_friend").click(function() {
+		if($(this).is(":checked")){
+			$(".link_info").show(500);
+			add_rules();
+		}else{
+			$(".link_info").hide(500);
+			del_rules();
+		}
+    }); 
+
+	var validate = $("#myform").validate({
+		rules:{
+			interest_zh: {
+				required : true
+			},
+			title: {
+				required : true
+			},
+			name: {
+				required : true
+			},
+			mobile: {
+				required : true,
+				isMobile:true
+			},
+			email: {
+				required : true,
+				email:true
+			},
+			company_name: {
+				required : true
+			},
+			address: {
+				required : true
+			},
+			'interest_product[]': {
+				required : true
+			},
+			learn_isle: {
+				required : true
+			},
+			area:{
+				isArea : true
+			}
+			
+		},
+		onclick:false,
+		onkeyup: false,
+		onfocusout: false,
+		messages:{
+			interest_zh: {
+				required : '请选择感兴趣展会'
+			},
+			title: {
+				required : '称呼不能为空'
+			},
+			name: {
+				required : '姓名不能为空'
+			},
+			mobile: {
+				required : '手机不能为空'
+			},
+			email: {
+				required : '邮箱不能为空'
+			},
+			company_name: {
+				required : '企业名称不能为空'
+			},
+			address: {
+				required : '地址不能为空'
+			},
+			'interest_product[]': {
+				required : '请选择感兴趣的产品类别'
+			},
+			learn_isle: {
+				required : '请选择您是如何得知ISLE'
+			},
+			area:{
+				required : '请选择地区'
+			}
+		},
+	    success: function(label) {
+		   label.html("&nbsp;").addClass("right");
+	    },
+		showErrors : function(errorMap, errorList) {  
+			var msg = "";  
+			$.each(errorList, function(i, v) {  
+				alert(v.message);
+				return false;
+			});  
+	    }  
+	});	
+
+});
+
+//添加规则
+function add_rules() {
+	$("#f_title").rules("add", { 
+		required : true,
+		messages: { 
+			required: "称呼不能为空!"
+		} 
+	});
+	$("#f_name").rules("add", { 
+		required : true,
+		messages: { 
+			required: "姓名不能为空!"
+		} 
+	});
+	$("#f_mobile").rules("add", { 
+		required : true,
+		messages: { 
+			required: "手机不能为空!"
+		} 
+	});
+	$("#f_email").rules("add", { 
+		required : true,
+		messages: { 
+			required: "邮箱不能为空!"
+		} 
+	});
+	$("#f_company_name").rules("add", { 
+		required : true,
+		messages: { 
+			required: "企业名称不能为空!"
+		} 
+	});
+}
+//先删除默认规则
+function del_rules() {
+	$("#f_title").rules("remove");
+	$("#f_name").rules("remove");
+	$("#f_mobile").rules("remove");
+	$("#f_email").rules("remove");
+	$("#f_company_name").rules("remove");
+}
+</script>
+
+{template "content","footer"}

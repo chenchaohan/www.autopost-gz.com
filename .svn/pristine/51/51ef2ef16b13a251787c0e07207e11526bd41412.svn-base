@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>抱歉！</title>
+<style>
+pre{ margin:auto; font:17px "黑体"; font-weight:bold;display:block; background:#CFF; width:600px; height:200px; border:1px #000 dotted; text-align:center;}
+p{ margin-top:30px}
+a{ text-decoration:none;color:#F00;font:14px;}
+a:hover{ background:#CCC; color: #0FF}
+
+</style>
+</head>
+
+<body>
+<pre>
+<p>您浏览器版本较低，在本页面的显示效果可能有差异。建议您升级到</p> 
+<a href="http://www.mozillaonline.com/">Firefox</a>
+<a href="http://www.google.com/chrome/?hl=zh-CN">Chrome</a>
+<a href="http://www.apple.com.cn/safari/">Safari</a>
+<a href="http://www.operachina.com/">Opera</a>
+</pre>
+</body>
+</html>
